@@ -1,1 +1,9 @@
 C:\Users\DELL\Documents\GitHub\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\bin\Debug\QL_HangHoa.exe.config
+C:\Users\DELL\Documents\GitHub\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\bin\Debug\QL_HangHoa.exe
+C:\Users\DELL\Documents\GitHub\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\bin\Debug\QL_HangHoa.pdb
+C:\Users\DELL\Documents\GitHub\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmMain.resources
+C:\Users\DELL\Documents\GitHub\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.Properties.Resources.resources
+C:\Users\DELL\Documents\GitHub\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csproj.GenerateResource.Cache
+C:\Users\DELL\Documents\GitHub\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.exe
+C:\Users\DELL\Documents\GitHub\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.pdb
