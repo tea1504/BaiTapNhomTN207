@@ -54,5 +54,19 @@ namespace QL_HangHoa
             catch (Exception) { }
             return blnResult;
         }
+        public static string MaHoaPassWord(string strPassword)
+        {
+            string str1 = "", str2 = "";
+            int n = strPassword.Length;
+            for (int i = 0; i < n ; i+=2)
+            {
+                str1 += strPassword[i];
+                if (n > i + 1)
+                {
+                    str2 += strPassword[i + 1];
+                }
+            }
+            return (str1 + str2);
+        }
     }
 }
