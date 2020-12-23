@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace QL_HangHoa
 {
-    public partial class frmMain : Form
+    public partial class frmHangHoa : Form
     {
-        public frmMain()
+        public frmHangHoa()
         {
             InitializeComponent();
-        }
-
-        private void mnuHangHoa_Click(object sender, EventArgs e)
-        {
-            frmHangHoa fHH = new frmHangHoa();
-            fHH.Show();
         }
     }
 }

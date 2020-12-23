@@ -30,11 +30,11 @@
         {
             this.mnuQLBanHang = new System.Windows.Forms.MenuStrip();
             this.mnuDuLieu = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuTienIch = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuNhanVien = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuHangHoa = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuLoaiHang = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPhatSinh = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuTienIch = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDangNhap = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuThoatDangNhap = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDoiMatKhau = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,17 +66,6 @@
             this.mnuDuLieu.Size = new System.Drawing.Size(59, 20);
             this.mnuDuLieu.Text = "Dữ Liệu";
             // 
-            // mnuTienIch
-            // 
-            this.mnuTienIch.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuDangNhap,
-            this.mnuThoatDangNhap,
-            this.mnuDoiMatKhau,
-            this.mnuGioiThieu});
-            this.mnuTienIch.Name = "mnuTienIch";
-            this.mnuTienIch.Size = new System.Drawing.Size(60, 20);
-            this.mnuTienIch.Text = "Tiện Ích";
-            // 
             // mnuNhanVien
             // 
             this.mnuNhanVien.Name = "mnuNhanVien";
@@ -88,6 +77,7 @@
             this.mnuHangHoa.Name = "mnuHangHoa";
             this.mnuHangHoa.Size = new System.Drawing.Size(152, 22);
             this.mnuHangHoa.Text = "Hàng Hóa";
+            this.mnuHangHoa.Click += new System.EventHandler(this.mnuHangHoa_Click);
             // 
             // mnuLoaiHang
             // 
@@ -100,6 +90,17 @@
             this.mnuPhatSinh.Name = "mnuPhatSinh";
             this.mnuPhatSinh.Size = new System.Drawing.Size(152, 22);
             this.mnuPhatSinh.Text = "Phát Sinh";
+            // 
+            // mnuTienIch
+            // 
+            this.mnuTienIch.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuDangNhap,
+            this.mnuThoatDangNhap,
+            this.mnuDoiMatKhau,
+            this.mnuGioiThieu});
+            this.mnuTienIch.Name = "mnuTienIch";
+            this.mnuTienIch.Size = new System.Drawing.Size(60, 20);
+            this.mnuTienIch.Text = "Tiện Ích";
             // 
             // mnuDangNhap
             // 
