@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -205,6 +206,64 @@ namespace QL_HangHoa
             blnThem = false;
             GanDuLieu();
             DieuKhienKhiBinhThuong();
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        //string LaySoTT()
+        //{
+
+        //    return "";
+        //}
+
+        void ThemMoi()
+        {
+            string strSql = "INSERT INTO PhatSinh(Ngay, Loai, Phieu, KhachHang, LyDo, MaHang, SoLg, Dgia, MaNV) Values(@Ngay, @Loai, @Phieu, @KhachHang, @LyDo, @MaHang, @SoLg, @Dgia, @MaNV)";
+            if (MyPublics.conMyConnection.State == ConnectionState.Closed)
+                MyPublics.conMyConnection.Open();
+            SqlCommand cmdCommand = new SqlCommand(strSql, MyPublics.conMyConnection);
+            cmdCommand.Parameters.AddWithValue("@Ngay", dtpNgay.Value);
+            cmdCommand.Parameters.AddWithValue("@Loai", cboLoai.SelectedValue.ToString());
+            cmdCommand.Parameters.AddWithValue("@Phieu", txtPhieu.Text);
+            cmdCommand.Parameters.AddWithValue("@KhachHang", txtKhachHang.Text);
+            cmdCommand.Parameters.AddWithValue("@LyDo", txtLyDo.Text);
+            cmdCommand.Parameters.AddWithValue("@MaHang", cboTenHang.SelectedValue.ToString());
+            cmdCommand.Parameters.AddWithValue("@SoLg", txtSoLuong.Text);
+            cmdCommand.Parameters.AddWithValue("@Dgia", txtDonGia.Text);
+            cmdCommand.Parameters.AddWithValue("@MaNV", cboNhanVien.SelectedValue.ToString());
+            cmdCommand.ExecuteNonQuery();
+            MyPublics.conMyConnection.Close();
+            dsPhatSinh.Tables["PhatSinh"].Rows.Add("1", dtpNgay.Value, cboLoai.Text, txtPhieu.Text, txtKhachHang.Text, txtLyDo.Text, cboTenHang.Text, txtSoLuong.Text, txtDonGia.Text, cboNhanVien.Text);
+            GanDuLieu();
+            DieuKhienKhiBinhThuong();
+        }
+
+        void CapNhat()
+        {
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            /*
+             * Ở Form Phat Sinh tất cả các cột trong CSDL đều cho phép null
+             * trừ cột Sott đã tự động tăng vì vậy không kiểm tra đầu vào của
+             * form
+             */
+            if (blnThem)
+            {
+                /*
+                 * Tương tự vì cột Sott đã tự động tăng và cũng là khóa chính
+                 * nên không cần phải kiểm tra khóa chính có tồn tại hay không 
+                 */
+                ThemMoi();
+                blnThem = false;
+            }
+            else
+                CapNhat();
         }
     }
 }

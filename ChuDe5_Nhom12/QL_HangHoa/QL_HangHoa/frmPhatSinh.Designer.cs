@@ -281,6 +281,7 @@ namespace QL_HangHoa
             this.btnLuu.TabIndex = 29;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnKhongLuu
             // 
@@ -300,6 +301,7 @@ namespace QL_HangHoa
             this.btnDong.TabIndex = 31;
             this.btnDong.Text = "Đóng Form";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // frmPhatSinh
             // 
