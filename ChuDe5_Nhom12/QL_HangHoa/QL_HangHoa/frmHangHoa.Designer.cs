@@ -38,14 +38,14 @@ namespace QL_HangHoa
             this.label5 = new System.Windows.Forms.Label();
             this.cboDonViTinh = new System.Windows.Forms.ComboBox();
             this.cboLoaiHang = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvHangHoa = new System.Windows.Forms.DataGridView();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnKhongLuu = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -124,13 +124,13 @@ namespace QL_HangHoa
             this.cboLoaiHang.Size = new System.Drawing.Size(229, 28);
             this.cboLoaiHang.TabIndex = 8;
             // 
-            // dataGridView1
+            // dgvHangHoa
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(159, 251);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(708, 255);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHangHoa.Location = new System.Drawing.Point(159, 251);
+            this.dgvHangHoa.Name = "dgvHangHoa";
+            this.dgvHangHoa.Size = new System.Drawing.Size(708, 255);
+            this.dgvHangHoa.TabIndex = 9;
             // 
             // btnThem
             // 
@@ -198,7 +198,7 @@ namespace QL_HangHoa
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvHangHoa);
             this.Controls.Add(this.cboLoaiHang);
             this.Controls.Add(this.cboDonViTinh);
             this.Controls.Add(this.label5);
@@ -213,7 +213,8 @@ namespace QL_HangHoa
             this.Name = "frmHangHoa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách hàng hóa";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmHangHoa_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHangHoa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -230,7 +231,7 @@ namespace QL_HangHoa
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboDonViTinh;
         private System.Windows.Forms.ComboBox cboLoaiHang;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHangHoa;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
