@@ -20,12 +20,11 @@ E:\Walnut\.Net\GitDemo\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\bin\Debug\QL_HangHoa.exe.config
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\bin\Debug\QL_HangHoa.exe
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\bin\Debug\QL_HangHoa.pdb
-C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csprojAssemblyReference.cache
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmDangNhap.resources
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmMain.resources
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.Properties.Resources.resources
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csproj.GenerateResource.cache
-C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.exe
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.pdb
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmHangHoa.resources
+C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csprojResolveAssemblyReference.cache
