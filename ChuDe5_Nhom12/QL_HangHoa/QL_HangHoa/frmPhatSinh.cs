@@ -29,7 +29,10 @@ namespace QL_HangHoa
             {
                 int row = dgvPhatSinh.CurrentRow.Index;
                 txtSoThuTu.Text = dgvPhatSinh[0, row].Value.ToString();
-                dtpNgay.Value = DateTime.Parse(dgvPhatSinh[1, row].Value.ToString());
+                if (dgvPhatSinh[1, row].Value.ToString() != "")
+                    dtpNgay.Value = DateTime.Parse(dgvPhatSinh[1, row].Value.ToString());
+                else
+                    dtpNgay.Value = DateTime.Now;
                 cboLoai.SelectedValue = dgvPhatSinh[2, row].Value.ToString();
                 txtPhieu.Text = dgvPhatSinh[3, row].Value.ToString();
                 txtKhachHang.Text = dgvPhatSinh[4, row].Value.ToString();
@@ -71,6 +74,8 @@ namespace QL_HangHoa
             btnKhongLuu.Enabled = false;
             btnDong.Enabled = true;
             txtSoThuTu.ReadOnly = true;
+            txtSoThuTu.Visible = true;
+            lblSoThuTu.Text = "Số thứ tự:";
             txtSoThuTu.BackColor = Color.White;
             dtpNgay.Enabled = false;
             cboLoai.Enabled = false;
@@ -97,7 +102,6 @@ namespace QL_HangHoa
             btnLuu.Enabled = true;
             btnKhongLuu.Enabled = true;
             btnDong.Enabled = false;
-            txtSoThuTu.ReadOnly = false;
             dtpNgay.Enabled = true;
             cboLoai.Enabled = true;
             txtPhieu.ReadOnly = false;
@@ -108,7 +112,8 @@ namespace QL_HangHoa
             txtDonGia.ReadOnly = false;
             cboNhanVien.Enabled = true;
 
-            txtSoThuTu.Clear();
+            txtSoThuTu.Visible = false;
+            lblSoThuTu.Text = "Số thứ tự sẽ được tự động thêm.";
             dtpNgay.Value = DateTime.Now;
             cboLoai.SelectedIndex = -1;
             txtPhieu.Clear();
@@ -173,6 +178,9 @@ namespace QL_HangHoa
             GanDuLieu();
             dgvPhatSinh.Width = 1136;
             dgvPhatSinh.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+            dgvPhatSinh.AllowUserToAddRows = false;
+            dgvPhatSinh.AllowUserToDeleteRows = false;
+            dgvPhatSinh.EditMode = DataGridViewEditMode.EditProgrammatically;
             DieuKhienKhiBinhThuong();
         }
 
@@ -190,6 +198,13 @@ namespace QL_HangHoa
         private void btnSua_Click(object sender, EventArgs e)
         {
             DieuKhienThiChinhSua();
+        }
+
+        private void btnKhongLuu_Click(object sender, EventArgs e)
+        {
+            blnThem = false;
+            GanDuLieu();
+            DieuKhienKhiBinhThuong();
         }
     }
 }

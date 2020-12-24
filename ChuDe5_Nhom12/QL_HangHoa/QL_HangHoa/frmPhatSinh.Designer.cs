@@ -30,7 +30,7 @@ namespace QL_HangHoa
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSoThuTu = new System.Windows.Forms.Label();
             this.txtSoThuTu = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -70,14 +70,14 @@ namespace QL_HangHoa
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh sách phát sinh";
             // 
-            // label2
+            // lblSoThuTu
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(237, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Số thứ tự:";
+            this.lblSoThuTu.AutoSize = true;
+            this.lblSoThuTu.Location = new System.Drawing.Point(237, 87);
+            this.lblSoThuTu.Name = "lblSoThuTu";
+            this.lblSoThuTu.Size = new System.Drawing.Size(78, 20);
+            this.lblSoThuTu.TabIndex = 1;
+            this.lblSoThuTu.Text = "Số thứ tự:";
             // 
             // txtSoThuTu
             // 
@@ -290,6 +290,7 @@ namespace QL_HangHoa
             this.btnKhongLuu.TabIndex = 30;
             this.btnKhongLuu.Text = "Không Lưu";
             this.btnKhongLuu.UseVisualStyleBackColor = true;
+            this.btnKhongLuu.Click += new System.EventHandler(this.btnKhongLuu_Click);
             // 
             // btnDong
             // 
@@ -331,7 +332,7 @@ namespace QL_HangHoa
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSoThuTu);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblSoThuTu);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -348,7 +349,7 @@ namespace QL_HangHoa
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSoThuTu;
         private System.Windows.Forms.TextBox txtSoThuTu;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
