@@ -16,5 +16,11 @@ namespace QL_HangHoa
         {
             InitializeComponent();
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            frmDangNhap frmDN = new frmDangNhap(this);
+            frmDN.ShowDialog();
+        }
     }
 }
