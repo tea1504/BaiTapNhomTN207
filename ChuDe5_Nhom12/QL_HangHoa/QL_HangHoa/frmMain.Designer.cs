@@ -69,25 +69,26 @@
             // mnuNhanVien
             // 
             this.mnuNhanVien.Name = "mnuNhanVien";
-            this.mnuNhanVien.Size = new System.Drawing.Size(152, 22);
+            this.mnuNhanVien.Size = new System.Drawing.Size(180, 22);
             this.mnuNhanVien.Text = "Nhân Viên";
             // 
             // mnuHangHoa
             // 
             this.mnuHangHoa.Name = "mnuHangHoa";
-            this.mnuHangHoa.Size = new System.Drawing.Size(152, 22);
+            this.mnuHangHoa.Size = new System.Drawing.Size(180, 22);
             this.mnuHangHoa.Text = "Hàng Hóa";
+            this.mnuHangHoa.Click += new System.EventHandler(this.mnuHangHoa_Click);
             // 
             // mnuLoaiHang
             // 
             this.mnuLoaiHang.Name = "mnuLoaiHang";
-            this.mnuLoaiHang.Size = new System.Drawing.Size(152, 22);
+            this.mnuLoaiHang.Size = new System.Drawing.Size(180, 22);
             this.mnuLoaiHang.Text = "Loại Hàng";
             // 
             // mnuPhatSinh
             // 
             this.mnuPhatSinh.Name = "mnuPhatSinh";
-            this.mnuPhatSinh.Size = new System.Drawing.Size(152, 22);
+            this.mnuPhatSinh.Size = new System.Drawing.Size(180, 22);
             this.mnuPhatSinh.Text = "Phát Sinh";
             // 
             // mnuTienIch

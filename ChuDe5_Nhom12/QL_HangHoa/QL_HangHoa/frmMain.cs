@@ -22,5 +22,11 @@ namespace QL_HangHoa
             frmDangNhap frmDN = new frmDangNhap(this);
             frmDN.ShowDialog();
         }
+
+        private void mnuHangHoa_Click(object sender, EventArgs e)
+        {
+            frmHangHoa fHH = new frmHangHoa();
+            fHH.Show();
+        }
     }
 }
