@@ -240,7 +240,7 @@ namespace QL_HangHoa
                 {
                     if (MyPublics.TonTaiKhoaChinh(txtMaHang.Text, "MaHang", "HangHoa"))
                     {
-                        MessageBox.Show("Hàng hóa " + txtMaHang.Text + " đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Hàng hóa 1 " + txtMaHang.Text + " đã tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         txtMaHang.Focus();
                     }
                     else
