@@ -129,8 +129,10 @@ namespace QL_HangHoa
             this.dgvHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHangHoa.Location = new System.Drawing.Point(159, 251);
             this.dgvHangHoa.Name = "dgvHangHoa";
+            this.dgvHangHoa.RowTemplate.Height = 30;
             this.dgvHangHoa.Size = new System.Drawing.Size(708, 255);
             this.dgvHangHoa.TabIndex = 9;
+            this.dgvHangHoa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHangHoa_CellClick);
             // 
             // btnThem
             // 
@@ -141,6 +143,7 @@ namespace QL_HangHoa
             this.btnThem.TabIndex = 10;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnSua
             // 
@@ -150,6 +153,7 @@ namespace QL_HangHoa
             this.btnSua.TabIndex = 11;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
@@ -168,6 +172,7 @@ namespace QL_HangHoa
             this.btnLuu.TabIndex = 13;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnKhongLuu
             // 
@@ -177,6 +182,7 @@ namespace QL_HangHoa
             this.btnKhongLuu.TabIndex = 14;
             this.btnKhongLuu.Text = "Không lưu";
             this.btnKhongLuu.UseVisualStyleBackColor = true;
+            this.btnKhongLuu.Click += new System.EventHandler(this.btnKhongLuu_Click);
             // 
             // btnDong
             // 
@@ -186,6 +192,7 @@ namespace QL_HangHoa
             this.btnDong.TabIndex = 15;
             this.btnDong.Text = "Đóng form";
             this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // frmHangHoa
             // 
