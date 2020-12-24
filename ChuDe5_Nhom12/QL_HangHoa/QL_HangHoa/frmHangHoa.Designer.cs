@@ -52,7 +52,7 @@ namespace QL_HangHoa
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(313, 24);
+            this.label1.Location = new System.Drawing.Point(208, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(281, 31);
             this.label1.TabIndex = 0;
@@ -61,7 +61,7 @@ namespace QL_HangHoa
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(308, 98);
+            this.label2.Location = new System.Drawing.Point(175, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 20);
             this.label2.TabIndex = 1;
@@ -69,14 +69,14 @@ namespace QL_HangHoa
             // 
             // txtMaHang
             // 
-            this.txtMaHang.Location = new System.Drawing.Point(410, 95);
+            this.txtMaHang.Location = new System.Drawing.Point(277, 89);
             this.txtMaHang.Name = "txtMaHang";
             this.txtMaHang.Size = new System.Drawing.Size(229, 26);
             this.txtMaHang.TabIndex = 2;
             // 
             // txtTenHang
             // 
-            this.txtTenHang.Location = new System.Drawing.Point(410, 127);
+            this.txtTenHang.Location = new System.Drawing.Point(277, 121);
             this.txtTenHang.Name = "txtTenHang";
             this.txtTenHang.Size = new System.Drawing.Size(229, 26);
             this.txtTenHang.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace QL_HangHoa
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(308, 130);
+            this.label3.Location = new System.Drawing.Point(175, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 3;
@@ -93,7 +93,7 @@ namespace QL_HangHoa
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(308, 167);
+            this.label4.Location = new System.Drawing.Point(175, 161);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 20);
             this.label4.TabIndex = 5;
@@ -102,7 +102,7 @@ namespace QL_HangHoa
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(308, 203);
+            this.label5.Location = new System.Drawing.Point(175, 197);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 20);
             this.label5.TabIndex = 6;
@@ -111,7 +111,7 @@ namespace QL_HangHoa
             // cboDonViTinh
             // 
             this.cboDonViTinh.FormattingEnabled = true;
-            this.cboDonViTinh.Location = new System.Drawing.Point(410, 167);
+            this.cboDonViTinh.Location = new System.Drawing.Point(277, 161);
             this.cboDonViTinh.Name = "cboDonViTinh";
             this.cboDonViTinh.Size = new System.Drawing.Size(229, 28);
             this.cboDonViTinh.TabIndex = 7;
@@ -119,7 +119,7 @@ namespace QL_HangHoa
             // cboLoaiHang
             // 
             this.cboLoaiHang.FormattingEnabled = true;
-            this.cboLoaiHang.Location = new System.Drawing.Point(410, 201);
+            this.cboLoaiHang.Location = new System.Drawing.Point(277, 195);
             this.cboLoaiHang.Name = "cboLoaiHang";
             this.cboLoaiHang.Size = new System.Drawing.Size(229, 28);
             this.cboLoaiHang.TabIndex = 8;
@@ -127,7 +127,7 @@ namespace QL_HangHoa
             // dgvHangHoa
             // 
             this.dgvHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHangHoa.Location = new System.Drawing.Point(159, 251);
+            this.dgvHangHoa.Location = new System.Drawing.Point(34, 252);
             this.dgvHangHoa.Name = "dgvHangHoa";
             this.dgvHangHoa.RowTemplate.Height = 30;
             this.dgvHangHoa.Size = new System.Drawing.Size(708, 255);
@@ -137,7 +137,7 @@ namespace QL_HangHoa
             // btnThem
             // 
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnThem.Location = new System.Drawing.Point(188, 544);
+            this.btnThem.Location = new System.Drawing.Point(60, 545);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(106, 42);
             this.btnThem.TabIndex = 10;
@@ -147,7 +147,7 @@ namespace QL_HangHoa
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(300, 544);
+            this.btnSua.Location = new System.Drawing.Point(172, 545);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(106, 42);
             this.btnSua.TabIndex = 11;
@@ -157,7 +157,7 @@ namespace QL_HangHoa
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(412, 544);
+            this.btnXoa.Location = new System.Drawing.Point(284, 545);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(106, 42);
             this.btnXoa.TabIndex = 12;
@@ -167,7 +167,7 @@ namespace QL_HangHoa
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(524, 544);
+            this.btnLuu.Location = new System.Drawing.Point(396, 545);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(106, 42);
             this.btnLuu.TabIndex = 13;
@@ -177,7 +177,7 @@ namespace QL_HangHoa
             // 
             // btnKhongLuu
             // 
-            this.btnKhongLuu.Location = new System.Drawing.Point(636, 544);
+            this.btnKhongLuu.Location = new System.Drawing.Point(508, 545);
             this.btnKhongLuu.Name = "btnKhongLuu";
             this.btnKhongLuu.Size = new System.Drawing.Size(106, 42);
             this.btnKhongLuu.TabIndex = 14;
@@ -187,7 +187,7 @@ namespace QL_HangHoa
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(748, 544);
+            this.btnDong.Location = new System.Drawing.Point(620, 545);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(106, 42);
             this.btnDong.TabIndex = 15;
@@ -199,7 +199,7 @@ namespace QL_HangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 692);
+            this.ClientSize = new System.Drawing.Size(784, 692);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnKhongLuu);
             this.Controls.Add(this.btnLuu);
