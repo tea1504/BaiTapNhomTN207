@@ -126,10 +126,15 @@ namespace QL_HangHoa
             txtTenHang.MaxLength = 20;
             dgvHangHoa.DataSource = dsHangHoa;
             dgvHangHoa.DataMember = "HangHoa";
+            dgvHangHoa.Width = 708;
             dgvHangHoa.Columns[0].HeaderText = "Mã hàng";
+            dgvHangHoa.Columns[0].Width = 150;
             dgvHangHoa.Columns[1].HeaderText = "Tên hàng";
+            dgvHangHoa.Columns[1].Width = 208;
             dgvHangHoa.Columns[2].HeaderText = "Đơn vị";
+            dgvHangHoa.Columns[2].Width = 100;
             dgvHangHoa.Columns[3].HeaderText = "Loại hàng";
+            dgvHangHoa.Columns[3].Width = 190;
             dgvHangHoa.AllowUserToAddRows = false;
             dgvHangHoa.AllowUserToDeleteRows = false;
             dgvHangHoa.EditMode = DataGridViewEditMode.EditProgrammatically;
@@ -246,6 +251,31 @@ namespace QL_HangHoa
                 else
                 {
                     ChinhSua();
+                }
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            if (MyPublics.TonTaiKhoaChinh(txtMaHang.Text, "MaHang", "PhatSinh"))
+            {
+                MessageBox.Show("Bạn phải xóa dữ liệu phát sinh của hàng hóa " + txtMaHang.Text + " trước", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                DialogResult blnDongY;
+                blnDongY = MessageBox.Show("Bạn có chắn chắn muốn xóa hàng hóa " + txtMaHang.Text, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (blnDongY == DialogResult.Yes)
+                {
+                    string strSql = "DELETE HangHoa WHERE MaHang=@MaHang";
+                    if (MyPublics.conMyConnection.State == ConnectionState.Closed)
+                        MyPublics.conMyConnection.Open();
+                    SqlCommand cmdCommand = new SqlCommand(strSql, MyPublics.conMyConnection);
+                    cmdCommand.Parameters.AddWithValue("@MaHang", txtMaHang.Text);
+                    cmdCommand.ExecuteNonQuery();
+                    MyPublics.conMyConnection.Close();
+                    dsHangHoa.Tables["HangHoa"].Rows.RemoveAt(dgvHangHoa.CurrentRow.Index);
+                    GanDuLieu();
                 }
             }
         }
