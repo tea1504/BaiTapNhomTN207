@@ -236,14 +236,14 @@ namespace QL_HangHoa
             // dgvPhatSinh
             // 
             this.dgvPhatSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPhatSinh.Location = new System.Drawing.Point(55, 426);
+            this.dgvPhatSinh.Location = new System.Drawing.Point(12, 426);
             this.dgvPhatSinh.Name = "dgvPhatSinh";
-            this.dgvPhatSinh.Size = new System.Drawing.Size(891, 211);
+            this.dgvPhatSinh.Size = new System.Drawing.Size(1136, 295);
             this.dgvPhatSinh.TabIndex = 25;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(153, 662);
+            this.btnThem.Location = new System.Drawing.Point(210, 743);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(110, 46);
             this.btnThem.TabIndex = 26;
@@ -252,7 +252,7 @@ namespace QL_HangHoa
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(268, 662);
+            this.btnSua.Location = new System.Drawing.Point(325, 743);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(110, 46);
             this.btnSua.TabIndex = 27;
@@ -261,7 +261,7 @@ namespace QL_HangHoa
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(384, 662);
+            this.btnXoa.Location = new System.Drawing.Point(441, 743);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(110, 46);
             this.btnXoa.TabIndex = 28;
@@ -270,7 +270,7 @@ namespace QL_HangHoa
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(500, 662);
+            this.btnLuu.Location = new System.Drawing.Point(557, 743);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(110, 46);
             this.btnLuu.TabIndex = 29;
@@ -279,7 +279,7 @@ namespace QL_HangHoa
             // 
             // btnKhongLuu
             // 
-            this.btnKhongLuu.Location = new System.Drawing.Point(616, 662);
+            this.btnKhongLuu.Location = new System.Drawing.Point(673, 743);
             this.btnKhongLuu.Name = "btnKhongLuu";
             this.btnKhongLuu.Size = new System.Drawing.Size(110, 46);
             this.btnKhongLuu.TabIndex = 30;
@@ -288,7 +288,7 @@ namespace QL_HangHoa
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(732, 662);
+            this.btnDong.Location = new System.Drawing.Point(789, 743);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(110, 46);
             this.btnDong.TabIndex = 31;
@@ -299,7 +299,7 @@ namespace QL_HangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 801);
+            this.ClientSize = new System.Drawing.Size(1160, 801);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnKhongLuu);
             this.Controls.Add(this.btnLuu);
