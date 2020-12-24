@@ -69,20 +69,19 @@
             // mnuNhanVien
             // 
             this.mnuNhanVien.Name = "mnuNhanVien";
-            this.mnuNhanVien.Size = new System.Drawing.Size(129, 22);
+            this.mnuNhanVien.Size = new System.Drawing.Size(152, 22);
             this.mnuNhanVien.Text = "Nhân Viên";
             // 
             // mnuHangHoa
             // 
             this.mnuHangHoa.Name = "mnuHangHoa";
-            this.mnuHangHoa.Size = new System.Drawing.Size(129, 22);
+            this.mnuHangHoa.Size = new System.Drawing.Size(152, 22);
             this.mnuHangHoa.Text = "Hàng Hóa";
-            this.mnuHangHoa.Click += new System.EventHandler(this.mnuHangHoa_Click);
             // 
             // mnuLoaiHang
             // 
             this.mnuLoaiHang.Name = "mnuLoaiHang";
-            this.mnuLoaiHang.Size = new System.Drawing.Size(129, 22);
+            this.mnuLoaiHang.Size = new System.Drawing.Size(152, 22);
             this.mnuLoaiHang.Text = "Loại Hàng";
             // 
             // mnuPhatSinh
@@ -90,7 +89,6 @@
             this.mnuPhatSinh.Name = "mnuPhatSinh";
             this.mnuPhatSinh.Size = new System.Drawing.Size(152, 22);
             this.mnuPhatSinh.Text = "Phát Sinh";
-            this.mnuPhatSinh.Click += new System.EventHandler(this.mnuPhatSinh_Click);
             // 
             // mnuTienIch
             // 
@@ -126,14 +124,12 @@
             this.mnuGioiThieu.Name = "mnuGioiThieu";
             this.mnuGioiThieu.Size = new System.Drawing.Size(167, 22);
             this.mnuGioiThieu.Text = "Giới Thiệu";
-            this.mnuGioiThieu.Click += new System.EventHandler(this.mnuGioiThieu_Click);
             // 
             // mnuThoat
             // 
             this.mnuThoat.Name = "mnuThoat";
             this.mnuThoat.Size = new System.Drawing.Size(49, 20);
             this.mnuThoat.Text = "Thoát";
-            this.mnuThoat.Click += new System.EventHandler(this.mnuThoat_Click);
             // 
             // frmMain
             // 
@@ -146,6 +142,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chương trình quản lý bán hàng";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.mnuQLBanHang.ResumeLayout(false);
             this.mnuQLBanHang.PerformLayout();
             this.ResumeLayout(false);
@@ -162,11 +159,11 @@
         public System.Windows.Forms.ToolStripMenuItem mnuLoaiHang;
         public System.Windows.Forms.ToolStripMenuItem mnuPhatSinh;
         public System.Windows.Forms.ToolStripMenuItem mnuTienIch;
-        private System.Windows.Forms.ToolStripMenuItem mnuDangNhap;
         public System.Windows.Forms.ToolStripMenuItem mnuThoatDangNhap;
         public System.Windows.Forms.ToolStripMenuItem mnuDoiMatKhau;
         private System.Windows.Forms.ToolStripMenuItem mnuGioiThieu;
         private System.Windows.Forms.ToolStripMenuItem mnuThoat;
+        public System.Windows.Forms.ToolStripMenuItem mnuDangNhap;
     }
 }
 
