@@ -132,6 +132,7 @@
             this.mnuThoat.Name = "mnuThoat";
             this.mnuThoat.Size = new System.Drawing.Size(49, 20);
             this.mnuThoat.Text = "Thoát";
+            this.mnuThoat.Click += new System.EventHandler(this.mnuThoat_Click);
             // 
             // frmMain
             // 
