@@ -46,14 +46,14 @@ namespace QL_HangHoa
             else
             {
                 txtSoThuTu.Clear();
-                cboLoai.SelectedIndex = -1;
+                cboLoai.SelectedIndex = 0;
                 txtPhieu.Clear();
                 txtKhachHang.Clear();
                 txtLyDo.Clear();
-                cboTenHang.SelectedIndex = -1;
+                cboTenHang.SelectedIndex = 0;
                 txtSoLuong.Clear();
                 txtDonGia.Clear();
-                cboNhanVien.SelectedIndex = - 1;
+                cboNhanVien.SelectedIndex = 0;
             }
         }
 
@@ -116,14 +116,14 @@ namespace QL_HangHoa
             txtSoThuTu.Visible = false;
             lblSoThuTu.Text = "Số thứ tự sẽ được tự động thêm.";
             dtpNgay.Value = DateTime.Now;
-            cboLoai.SelectedIndex = -1;
+            cboLoai.SelectedIndex = 0;
             txtPhieu.Clear();
             txtKhachHang.Clear();
             txtLyDo.Clear();
-            cboTenHang.SelectedIndex = -1;
+            cboTenHang.SelectedIndex = 0;
             txtSoLuong.Clear();
             txtDonGia.Clear();
-            cboNhanVien.SelectedIndex = -1;
+            cboNhanVien.SelectedIndex = 0;
 
             dgvPhatSinh.Enabled = false;
         }
@@ -213,11 +213,44 @@ namespace QL_HangHoa
             this.Close();
         }
 
-        //string LaySoTT()
-        //{
+        string LaySoTT()
+        {
+            string strSql = "SELECT MAX(Sott) FROM PhatSinh";
+            string strResult = "";
+            if (MyPublics.conMyConnection.State == ConnectionState.Closed)
+                MyPublics.conMyConnection.Open();
+            SqlCommand cmdCommand = new SqlCommand(strSql, MyPublics.conMyConnection);
+            SqlDataReader drReader = cmdCommand.ExecuteReader();
+            if (drReader.HasRows)
+            {
+                drReader.Read();
+                strResult = drReader[0].ToString();
+                drReader.Close();
+            }
+            return strResult;
+        }
 
-        //    return "";
-        //}
+        bool Check()
+        {
+            float f;
+            if (txtSoLuong.Text.Trim() == "") txtSoLuong.Text = "0";
+            if (txtDonGia.Text.Trim() == "") txtDonGia.Text = "0";
+            if(!float.TryParse(txtSoLuong.Text, out f))
+            {
+                MessageBox.Show("Bạn phải nhập số lượng là số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSoLuong.Clear();
+                txtSoLuong.Focus();
+                return false;
+            }
+            else if(!float.TryParse(txtDonGia.Text, out f))
+            {
+                MessageBox.Show("Bạn phải nhập đơn giá là số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDonGia.Clear();
+                txtDonGia.Focus();
+                return false;
+            }
+            return true;
+        }
 
         void ThemMoi()
         {
@@ -231,12 +264,14 @@ namespace QL_HangHoa
             cmdCommand.Parameters.AddWithValue("@KhachHang", txtKhachHang.Text);
             cmdCommand.Parameters.AddWithValue("@LyDo", txtLyDo.Text);
             cmdCommand.Parameters.AddWithValue("@MaHang", cboTenHang.SelectedValue.ToString());
-            cmdCommand.Parameters.AddWithValue("@SoLg", txtSoLuong.Text);
-            cmdCommand.Parameters.AddWithValue("@Dgia", txtDonGia.Text);
+            float sl = float.Parse(txtSoLuong.Text), dg = float.Parse(txtDonGia.Text); 
+            cmdCommand.Parameters.AddWithValue("@SoLg", sl);
+            cmdCommand.Parameters.AddWithValue("@Dgia", dg);
             cmdCommand.Parameters.AddWithValue("@MaNV", cboNhanVien.SelectedValue.ToString());
             cmdCommand.ExecuteNonQuery();
             MyPublics.conMyConnection.Close();
-            dsPhatSinh.Tables["PhatSinh"].Rows.Add("1", dtpNgay.Value, cboLoai.Text, txtPhieu.Text, txtKhachHang.Text, txtLyDo.Text, cboTenHang.Text, txtSoLuong.Text, txtDonGia.Text, cboNhanVien.Text);
+            int SoTT = int.Parse(LaySoTT());
+            dsPhatSinh.Tables["PhatSinh"].Rows.Add(SoTT, dtpNgay.Value, cboLoai.Text, txtPhieu.Text, txtKhachHang.Text, txtLyDo.Text, cboTenHang.Text, sl, dg, cboNhanVien.Text);
             GanDuLieu();
             DieuKhienKhiBinhThuong();
         }
@@ -248,22 +283,16 @@ namespace QL_HangHoa
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            /*
-             * Ở Form Phat Sinh tất cả các cột trong CSDL đều cho phép null
-             * trừ cột Sott đã tự động tăng vì vậy không kiểm tra đầu vào của
-             * form
-             */
-            if (blnThem)
+            if (Check())
             {
-                /*
-                 * Tương tự vì cột Sott đã tự động tăng và cũng là khóa chính
-                 * nên không cần phải kiểm tra khóa chính có tồn tại hay không 
-                 */
-                ThemMoi();
-                blnThem = false;
+                if (blnThem)
+                {
+                    ThemMoi();
+                    blnThem = false;
+                }
+                else
+                    CapNhat();
             }
-            else
-                CapNhat();
         }
     }
 }
