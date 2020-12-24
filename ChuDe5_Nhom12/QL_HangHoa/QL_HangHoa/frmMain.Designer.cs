@@ -90,6 +90,7 @@
             this.mnuPhatSinh.Name = "mnuPhatSinh";
             this.mnuPhatSinh.Size = new System.Drawing.Size(180, 22);
             this.mnuPhatSinh.Text = "Phát Sinh";
+            this.mnuPhatSinh.Click += new System.EventHandler(this.mnuPhatSinh_Click);
             // 
             // mnuTienIch
             // 

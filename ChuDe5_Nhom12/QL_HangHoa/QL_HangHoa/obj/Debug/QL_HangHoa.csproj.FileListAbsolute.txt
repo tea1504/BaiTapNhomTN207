@@ -29,3 +29,4 @@ C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_H
 C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmHangHoa.resources
 C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csprojAssemblyReference.cache
 C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmPhatSinh.resources
