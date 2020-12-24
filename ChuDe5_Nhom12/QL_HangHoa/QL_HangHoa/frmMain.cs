@@ -32,5 +32,11 @@ namespace QL_HangHoa
         {
             Application.Exit();
         }
+
+        private void mnuPhatSinh_Click(object sender, EventArgs e)
+        {
+            frmPhatSinh fPS = new frmPhatSinh();
+            fPS.Show();
+        }
     }
 }

@@ -88,8 +88,9 @@
             // mnuPhatSinh
             // 
             this.mnuPhatSinh.Name = "mnuPhatSinh";
-            this.mnuPhatSinh.Size = new System.Drawing.Size(129, 22);
+            this.mnuPhatSinh.Size = new System.Drawing.Size(152, 22);
             this.mnuPhatSinh.Text = "Phát Sinh";
+            this.mnuPhatSinh.Click += new System.EventHandler(this.mnuPhatSinh_Click);
             // 
             // mnuTienIch
             // 
