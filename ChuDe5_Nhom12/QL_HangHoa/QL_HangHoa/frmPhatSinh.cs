@@ -23,13 +23,43 @@ namespace QL_HangHoa
             InitializeComponent();
         }
 
+        void GanDuLieu()
+        {
+            if(dgvPhatSinh.Rows.Count > 0)
+            {
+                int row = dgvPhatSinh.CurrentRow.Index;
+                txtSoThuTu.Text = dgvPhatSinh[0, row].Value.ToString();
+                dtpNgay.Value = DateTime.Parse(dgvPhatSinh[1, row].Value.ToString());
+                cboLoai.SelectedValue = dgvPhatSinh[2, row].Value.ToString();
+                txtPhieu.Text = dgvPhatSinh[3, row].Value.ToString();
+                txtKhachHang.Text = dgvPhatSinh[4, row].Value.ToString();
+                txtLyDo.Text = dgvPhatSinh[5, row].Value.ToString();
+                cboTenHang.SelectedIndex = cboTenHang.FindStringExact(dgvPhatSinh[6, row].Value.ToString());
+                txtSoLuong.Text = dgvPhatSinh[7, row].Value.ToString();
+                txtDonGia.Text = dgvPhatSinh[8, row].Value.ToString();
+                cboNhanVien.SelectedIndex = cboNhanVien.FindStringExact(dgvPhatSinh[9, row].Value.ToString());
+            }
+            else
+            {
+                txtSoThuTu.Clear();
+                cboLoai.SelectedIndex = -1;
+                txtPhieu.Clear();
+                txtKhachHang.Clear();
+                txtLyDo.Clear();
+                cboTenHang.SelectedIndex = -1;
+                txtSoLuong.Clear();
+                txtDonGia.Clear();
+                cboNhanVien.SelectedIndex = - 1;
+            }
+        }
+
         private void frmPhatSinh_Load(object sender, EventArgs e)
         {
             string strSelect = "SELECT PhatSinh.Sott, PhatSinh.Ngay, PhatSinh.Loai, PhatSinh.Phieu, PhatSinh.KhachHang, PhatSinh.LyDo, HangHoa.TenHang, PhatSinh.SoLg, PhatSinh.Dgia, NhanVien.HoLot + ' ' + NhanVien.Ten AS htnv FROM PhatSinh LEFT JOIN HangHoa ON PhatSinh.MaHang = HangHoa.MaHang LEFT JOIN NhanVien ON PhatSinh.MaNV = NhanVien.MaNV ORDER BY PhatSinh.Sott";
             MyPublics.OpenData(strSelect, dsPhatSinh, "PhatSinh");
             strSelect = "SELECT MaHang, TenHang FROM HangHoa";
             MyPublics.OpenData(strSelect, dsTenHang, "HangHoa");
-            strSelect = "SELECT MaNV, MaNV + ' - ' + HoLot + ' ' + Ten AS HoTen FROM NhanVien";
+            strSelect = "SELECT MaNV, HoLot + ' ' + Ten AS HoTen FROM NhanVien";
             MyPublics.OpenData(strSelect, dsNhanVien, "NhanVien");
             dsLoai.Tables.Add("DSLoai");
             dsLoai.Tables["DSLoai"].Columns.Add("Loai");
@@ -51,8 +81,14 @@ namespace QL_HangHoa
             txtPhieu.MaxLength = 4;
             txtKhachHang.MaxLength = 30;
             txtLyDo.MaxLength = 30;
-
+            GanDuLieu();
             dgvPhatSinh.Width = 1136;
+            dgvPhatSinh.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+        }
+
+        private void dgvPhatSinh_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            GanDuLieu();
         }
     }
 }

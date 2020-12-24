@@ -204,6 +204,8 @@ namespace QL_HangHoa
             // 
             // dtpNgay
             // 
+            this.dtpNgay.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgay.Location = new System.Drawing.Point(357, 117);
             this.dtpNgay.Name = "dtpNgay";
             this.dtpNgay.Size = new System.Drawing.Size(360, 26);
@@ -240,6 +242,7 @@ namespace QL_HangHoa
             this.dgvPhatSinh.Name = "dgvPhatSinh";
             this.dgvPhatSinh.Size = new System.Drawing.Size(1136, 295);
             this.dgvPhatSinh.TabIndex = 25;
+            this.dgvPhatSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhatSinh_CellClick);
             // 
             // btnThem
             // 
