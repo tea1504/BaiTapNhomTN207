@@ -91,12 +91,55 @@ namespace QL_HangHoa
 
         void DieuKhienKhiThemMoi()
         {
+            btnThem.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            btnKhongLuu.Enabled = true;
+            btnDong.Enabled = false;
+            txtSoThuTu.ReadOnly = false;
+            dtpNgay.Enabled = true;
+            cboLoai.Enabled = true;
+            txtPhieu.ReadOnly = false;
+            txtKhachHang.ReadOnly = false;
+            txtLyDo.ReadOnly = false;
+            cboTenHang.Enabled = true;
+            txtSoLuong.ReadOnly = false;
+            txtDonGia.ReadOnly = false;
+            cboNhanVien.Enabled = true;
 
+            txtSoThuTu.Clear();
+            dtpNgay.Value = DateTime.Now;
+            cboLoai.SelectedIndex = -1;
+            txtPhieu.Clear();
+            txtKhachHang.Clear();
+            txtLyDo.Clear();
+            cboTenHang.SelectedIndex = -1;
+            txtSoLuong.Clear();
+            txtDonGia.Clear();
+            cboNhanVien.SelectedIndex = -1;
+
+            dgvPhatSinh.Enabled = false;
         }
 
         void DieuKhienThiChinhSua()
         {
-
+            btnThem.Enabled = false;
+            btnSua.Enabled = false;
+            btnXoa.Enabled = false;
+            btnLuu.Enabled = true;
+            btnKhongLuu.Enabled = true;
+            btnDong.Enabled = false;
+            dtpNgay.Enabled = true;
+            cboLoai.Enabled = true;
+            txtPhieu.ReadOnly = false;
+            txtKhachHang.ReadOnly = false;
+            txtLyDo.ReadOnly = false;
+            cboTenHang.Enabled = true;
+            txtSoLuong.ReadOnly = false;
+            txtDonGia.ReadOnly = false;
+            cboNhanVien.Enabled = true;
+            dgvPhatSinh.Enabled = false;
         }
 
         private void frmPhatSinh_Load(object sender, EventArgs e)
@@ -136,6 +179,17 @@ namespace QL_HangHoa
         private void dgvPhatSinh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             GanDuLieu();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            blnThem = true;
+            DieuKhienKhiThemMoi();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            DieuKhienThiChinhSua();
         }
     }
 }
