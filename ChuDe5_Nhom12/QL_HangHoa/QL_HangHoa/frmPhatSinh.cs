@@ -53,6 +53,52 @@ namespace QL_HangHoa
             }
         }
 
+        void DieuKhienKhiBinhThuong()
+        {
+            if(MyPublics.strQuyenSD == "Quản lý")
+            {
+                btnThem.Enabled = true;
+                btnSua.Enabled = true;
+                btnXoa.Enabled = true;
+            }
+            else
+            {
+                btnThem.Enabled = false;
+                btnSua.Enabled = false;
+                btnXoa.Enabled = false;
+            }
+            btnLuu.Enabled = false;
+            btnKhongLuu.Enabled = false;
+            btnDong.Enabled = true;
+            txtSoThuTu.ReadOnly = true;
+            txtSoThuTu.BackColor = Color.White;
+            dtpNgay.Enabled = false;
+            cboLoai.Enabled = false;
+            txtPhieu.ReadOnly = true;
+            txtPhieu.BackColor = Color.White;
+            txtKhachHang.ReadOnly = true;
+            txtKhachHang.BackColor = Color.White;
+            txtLyDo.ReadOnly = true;
+            txtLyDo.BackColor = Color.White;
+            cboTenHang.Enabled = false;
+            txtSoLuong.ReadOnly = true;
+            txtSoLuong.BackColor = Color.White;
+            txtDonGia.ReadOnly = true;
+            txtDonGia.BackColor = Color.White;
+            cboNhanVien.Enabled = false;
+            dgvPhatSinh.Enabled = true;
+        }
+
+        void DieuKhienKhiThemMoi()
+        {
+
+        }
+
+        void DieuKhienThiChinhSua()
+        {
+
+        }
+
         private void frmPhatSinh_Load(object sender, EventArgs e)
         {
             string strSelect = "SELECT PhatSinh.Sott, PhatSinh.Ngay, PhatSinh.Loai, PhatSinh.Phieu, PhatSinh.KhachHang, PhatSinh.LyDo, HangHoa.TenHang, PhatSinh.SoLg, PhatSinh.Dgia, NhanVien.HoLot + ' ' + NhanVien.Ten AS htnv FROM PhatSinh LEFT JOIN HangHoa ON PhatSinh.MaHang = HangHoa.MaHang LEFT JOIN NhanVien ON PhatSinh.MaNV = NhanVien.MaNV ORDER BY PhatSinh.Sott";
@@ -84,6 +130,7 @@ namespace QL_HangHoa
             GanDuLieu();
             dgvPhatSinh.Width = 1136;
             dgvPhatSinh.Columns[1].DefaultCellStyle.Format = "dd/MM/yyyy";
+            DieuKhienKhiBinhThuong();
         }
 
         private void dgvPhatSinh_CellClick(object sender, DataGridViewCellEventArgs e)
