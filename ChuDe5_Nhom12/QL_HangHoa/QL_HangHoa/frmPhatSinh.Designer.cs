@@ -64,7 +64,7 @@ namespace QL_HangHoa
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(365, 33);
+            this.label1.Location = new System.Drawing.Point(640, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(280, 31);
             this.label1.TabIndex = 0;
@@ -73,7 +73,7 @@ namespace QL_HangHoa
             // lblSoThuTu
             // 
             this.lblSoThuTu.AutoSize = true;
-            this.lblSoThuTu.Location = new System.Drawing.Point(237, 87);
+            this.lblSoThuTu.Location = new System.Drawing.Point(512, 81);
             this.lblSoThuTu.Name = "lblSoThuTu";
             this.lblSoThuTu.Size = new System.Drawing.Size(78, 20);
             this.lblSoThuTu.TabIndex = 1;
@@ -81,7 +81,7 @@ namespace QL_HangHoa
             // 
             // txtSoThuTu
             // 
-            this.txtSoThuTu.Location = new System.Drawing.Point(357, 84);
+            this.txtSoThuTu.Location = new System.Drawing.Point(632, 78);
             this.txtSoThuTu.Name = "txtSoThuTu";
             this.txtSoThuTu.Size = new System.Drawing.Size(360, 26);
             this.txtSoThuTu.TabIndex = 2;
@@ -89,7 +89,7 @@ namespace QL_HangHoa
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(237, 119);
+            this.label3.Location = new System.Drawing.Point(512, 113);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 20);
             this.label3.TabIndex = 3;
@@ -98,7 +98,7 @@ namespace QL_HangHoa
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(237, 151);
+            this.label4.Location = new System.Drawing.Point(512, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 20);
             this.label4.TabIndex = 5;
@@ -106,7 +106,7 @@ namespace QL_HangHoa
             // 
             // txtPhieu
             // 
-            this.txtPhieu.Location = new System.Drawing.Point(357, 180);
+            this.txtPhieu.Location = new System.Drawing.Point(632, 174);
             this.txtPhieu.Name = "txtPhieu";
             this.txtPhieu.Size = new System.Drawing.Size(360, 26);
             this.txtPhieu.TabIndex = 8;
@@ -114,7 +114,7 @@ namespace QL_HangHoa
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(237, 183);
+            this.label5.Location = new System.Drawing.Point(512, 177);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 20);
             this.label5.TabIndex = 7;
@@ -122,7 +122,7 @@ namespace QL_HangHoa
             // 
             // txtKhachHang
             // 
-            this.txtKhachHang.Location = new System.Drawing.Point(357, 212);
+            this.txtKhachHang.Location = new System.Drawing.Point(632, 206);
             this.txtKhachHang.Name = "txtKhachHang";
             this.txtKhachHang.Size = new System.Drawing.Size(360, 26);
             this.txtKhachHang.TabIndex = 10;
@@ -130,7 +130,7 @@ namespace QL_HangHoa
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(237, 215);
+            this.label6.Location = new System.Drawing.Point(512, 209);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 20);
             this.label6.TabIndex = 9;
@@ -138,7 +138,7 @@ namespace QL_HangHoa
             // 
             // txtLyDo
             // 
-            this.txtLyDo.Location = new System.Drawing.Point(357, 244);
+            this.txtLyDo.Location = new System.Drawing.Point(632, 238);
             this.txtLyDo.Name = "txtLyDo";
             this.txtLyDo.Size = new System.Drawing.Size(360, 26);
             this.txtLyDo.TabIndex = 12;
@@ -146,7 +146,7 @@ namespace QL_HangHoa
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(237, 247);
+            this.label7.Location = new System.Drawing.Point(512, 241);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 20);
             this.label7.TabIndex = 11;
@@ -155,7 +155,7 @@ namespace QL_HangHoa
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(237, 279);
+            this.label8.Location = new System.Drawing.Point(512, 273);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 20);
             this.label8.TabIndex = 13;
@@ -163,7 +163,7 @@ namespace QL_HangHoa
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(357, 308);
+            this.txtSoLuong.Location = new System.Drawing.Point(632, 302);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(360, 26);
             this.txtSoLuong.TabIndex = 16;
@@ -171,7 +171,7 @@ namespace QL_HangHoa
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(237, 311);
+            this.label9.Location = new System.Drawing.Point(512, 305);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(76, 20);
             this.label9.TabIndex = 15;
@@ -179,7 +179,7 @@ namespace QL_HangHoa
             // 
             // txtDonGia
             // 
-            this.txtDonGia.Location = new System.Drawing.Point(357, 340);
+            this.txtDonGia.Location = new System.Drawing.Point(632, 334);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(360, 26);
             this.txtDonGia.TabIndex = 18;
@@ -187,7 +187,7 @@ namespace QL_HangHoa
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(237, 343);
+            this.label10.Location = new System.Drawing.Point(512, 337);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 20);
             this.label10.TabIndex = 17;
@@ -196,7 +196,7 @@ namespace QL_HangHoa
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(237, 375);
+            this.label11.Location = new System.Drawing.Point(512, 369);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(83, 20);
             this.label11.TabIndex = 19;
@@ -206,7 +206,7 @@ namespace QL_HangHoa
             // 
             this.dtpNgay.CustomFormat = "dd/MM/yyyy";
             this.dtpNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpNgay.Location = new System.Drawing.Point(357, 117);
+            this.dtpNgay.Location = new System.Drawing.Point(632, 111);
             this.dtpNgay.Name = "dtpNgay";
             this.dtpNgay.Size = new System.Drawing.Size(360, 26);
             this.dtpNgay.TabIndex = 21;
@@ -214,7 +214,7 @@ namespace QL_HangHoa
             // cboLoai
             // 
             this.cboLoai.FormattingEnabled = true;
-            this.cboLoai.Location = new System.Drawing.Point(357, 146);
+            this.cboLoai.Location = new System.Drawing.Point(632, 140);
             this.cboLoai.Name = "cboLoai";
             this.cboLoai.Size = new System.Drawing.Size(360, 28);
             this.cboLoai.TabIndex = 22;
@@ -222,7 +222,7 @@ namespace QL_HangHoa
             // cboTenHang
             // 
             this.cboTenHang.FormattingEnabled = true;
-            this.cboTenHang.Location = new System.Drawing.Point(357, 276);
+            this.cboTenHang.Location = new System.Drawing.Point(632, 270);
             this.cboTenHang.Name = "cboTenHang";
             this.cboTenHang.Size = new System.Drawing.Size(360, 28);
             this.cboTenHang.TabIndex = 23;
@@ -230,7 +230,7 @@ namespace QL_HangHoa
             // cboNhanVien
             // 
             this.cboNhanVien.FormattingEnabled = true;
-            this.cboNhanVien.Location = new System.Drawing.Point(357, 372);
+            this.cboNhanVien.Location = new System.Drawing.Point(632, 366);
             this.cboNhanVien.Name = "cboNhanVien";
             this.cboNhanVien.Size = new System.Drawing.Size(360, 28);
             this.cboNhanVien.TabIndex = 24;
@@ -240,13 +240,14 @@ namespace QL_HangHoa
             this.dgvPhatSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhatSinh.Location = new System.Drawing.Point(12, 426);
             this.dgvPhatSinh.Name = "dgvPhatSinh";
-            this.dgvPhatSinh.Size = new System.Drawing.Size(1136, 295);
+            this.dgvPhatSinh.RowTemplate.Height = 30;
+            this.dgvPhatSinh.Size = new System.Drawing.Size(1420, 295);
             this.dgvPhatSinh.TabIndex = 25;
             this.dgvPhatSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhatSinh_CellClick);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(210, 743);
+            this.btnThem.Location = new System.Drawing.Point(453, 743);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(110, 46);
             this.btnThem.TabIndex = 26;
@@ -256,7 +257,7 @@ namespace QL_HangHoa
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(325, 743);
+            this.btnSua.Location = new System.Drawing.Point(568, 743);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(110, 46);
             this.btnSua.TabIndex = 27;
@@ -266,7 +267,7 @@ namespace QL_HangHoa
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(441, 743);
+            this.btnXoa.Location = new System.Drawing.Point(684, 743);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(110, 46);
             this.btnXoa.TabIndex = 28;
@@ -276,7 +277,7 @@ namespace QL_HangHoa
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(557, 743);
+            this.btnLuu.Location = new System.Drawing.Point(800, 743);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(110, 46);
             this.btnLuu.TabIndex = 29;
@@ -286,7 +287,7 @@ namespace QL_HangHoa
             // 
             // btnKhongLuu
             // 
-            this.btnKhongLuu.Location = new System.Drawing.Point(673, 743);
+            this.btnKhongLuu.Location = new System.Drawing.Point(916, 743);
             this.btnKhongLuu.Name = "btnKhongLuu";
             this.btnKhongLuu.Size = new System.Drawing.Size(110, 46);
             this.btnKhongLuu.TabIndex = 30;
@@ -296,7 +297,7 @@ namespace QL_HangHoa
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(789, 743);
+            this.btnDong.Location = new System.Drawing.Point(1032, 743);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(110, 46);
             this.btnDong.TabIndex = 31;
@@ -308,7 +309,7 @@ namespace QL_HangHoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1160, 801);
+            this.ClientSize = new System.Drawing.Size(1474, 801);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnKhongLuu);
             this.Controls.Add(this.btnLuu);
