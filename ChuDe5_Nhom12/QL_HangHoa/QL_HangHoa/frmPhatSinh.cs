@@ -46,14 +46,14 @@ namespace QL_HangHoa
             else
             {
                 txtSoThuTu.Clear();
-                cboLoai.SelectedIndex = 0;
+                cboLoai.SelectedIndex = -1;
                 txtPhieu.Clear();
                 txtKhachHang.Clear();
                 txtLyDo.Clear();
-                cboTenHang.SelectedIndex = 0;
+                cboTenHang.SelectedIndex = -1;
                 txtSoLuong.Clear();
                 txtDonGia.Clear();
-                cboNhanVien.SelectedIndex = 0;
+                cboNhanVien.SelectedIndex = -1;
             }
         }
 
@@ -116,14 +116,14 @@ namespace QL_HangHoa
             txtSoThuTu.Visible = false;
             lblSoThuTu.Text = "Số thứ tự sẽ được tự động thêm.";
             dtpNgay.Value = DateTime.Now;
-            cboLoai.SelectedIndex = 0;
+            cboLoai.SelectedIndex = -1;
             txtPhieu.Clear();
             txtKhachHang.Clear();
             txtLyDo.Clear();
-            cboTenHang.SelectedIndex = 0;
+            cboTenHang.SelectedIndex = -1;
             txtSoLuong.Clear();
             txtDonGia.Clear();
-            cboNhanVien.SelectedIndex = 0;
+            cboNhanVien.SelectedIndex = -1;
 
             dgvPhatSinh.Enabled = false;
         }
@@ -259,15 +259,24 @@ namespace QL_HangHoa
                 MyPublics.conMyConnection.Open();
             SqlCommand cmdCommand = new SqlCommand(strSql, MyPublics.conMyConnection);
             cmdCommand.Parameters.AddWithValue("@Ngay", dtpNgay.Value);
-            cmdCommand.Parameters.AddWithValue("@Loai", cboLoai.SelectedValue.ToString());
+            if(cboLoai.SelectedIndex==-1)
+                cmdCommand.Parameters.AddWithValue("@Loai", DBNull.Value);
+            else
+                cmdCommand.Parameters.AddWithValue("@Loai", cboLoai.SelectedValue.ToString());
             cmdCommand.Parameters.AddWithValue("@Phieu", txtPhieu.Text);
             cmdCommand.Parameters.AddWithValue("@KhachHang", txtKhachHang.Text);
             cmdCommand.Parameters.AddWithValue("@LyDo", txtLyDo.Text);
-            cmdCommand.Parameters.AddWithValue("@MaHang", cboTenHang.SelectedValue.ToString());
+            if(cboTenHang.SelectedIndex==-1)
+                cmdCommand.Parameters.AddWithValue("@MaHang", DBNull.Value);
+            else
+                cmdCommand.Parameters.AddWithValue("@MaHang", cboTenHang.SelectedValue.ToString());
             float sl = float.Parse(txtSoLuong.Text), dg = float.Parse(txtDonGia.Text); 
             cmdCommand.Parameters.AddWithValue("@SoLg", sl);
             cmdCommand.Parameters.AddWithValue("@Dgia", dg);
-            cmdCommand.Parameters.AddWithValue("@MaNV", cboNhanVien.SelectedValue.ToString());
+            if(cboNhanVien.SelectedIndex==-1)
+                cmdCommand.Parameters.AddWithValue("@MaNV", DBNull.Value);
+            else
+                cmdCommand.Parameters.AddWithValue("@MaNV", cboNhanVien.SelectedValue.ToString());
             cmdCommand.ExecuteNonQuery();
             MyPublics.conMyConnection.Close();
             int SoTT = int.Parse(LaySoTT());
@@ -278,7 +287,44 @@ namespace QL_HangHoa
 
         void CapNhat()
         {
-
+            string strSql = "UPDATE PhatSinh SET Ngay=@Ngay, Loai=@Loai, Phieu=@Phieu, KhachHang=@KhachHang, LyDo=@LyDo, MaHang=@MaHang, SoLg=@SoLg, Dgia=@Dgia, MaNV=@MaNV WHERE Sott=@Sott";
+            if (MyPublics.conMyConnection.State == ConnectionState.Closed)
+                MyPublics.conMyConnection.Open();
+            SqlCommand cmdCommand = new SqlCommand(strSql, MyPublics.conMyConnection);
+            cmdCommand.Parameters.AddWithValue("@Sott", txtSoThuTu.Text);
+            cmdCommand.Parameters.AddWithValue("@Ngay", dtpNgay.Value);
+            if (cboLoai.SelectedIndex == -1)
+                cmdCommand.Parameters.AddWithValue("@Loai", DBNull.Value);
+            else
+                cmdCommand.Parameters.AddWithValue("@Loai", cboLoai.SelectedValue.ToString());
+            cmdCommand.Parameters.AddWithValue("@Phieu", txtPhieu.Text);
+            cmdCommand.Parameters.AddWithValue("@KhachHang", txtKhachHang.Text);
+            cmdCommand.Parameters.AddWithValue("@LyDo", txtLyDo.Text);
+            if (cboTenHang.SelectedIndex == -1)
+                cmdCommand.Parameters.AddWithValue("@MaHang", DBNull.Value);
+            else
+                cmdCommand.Parameters.AddWithValue("@MaHang", cboTenHang.SelectedValue.ToString());
+            float sl = float.Parse(txtSoLuong.Text), dg = float.Parse(txtDonGia.Text);
+            cmdCommand.Parameters.AddWithValue("@SoLg", sl);
+            cmdCommand.Parameters.AddWithValue("@Dgia", dg);
+            if (cboNhanVien.SelectedIndex == -1)
+                cmdCommand.Parameters.AddWithValue("@MaNV", DBNull.Value);
+            else
+                cmdCommand.Parameters.AddWithValue("@MaNV", cboNhanVien.SelectedValue.ToString());
+            cmdCommand.ExecuteNonQuery();
+            MyPublics.conMyConnection.Close();
+            int row = dgvPhatSinh.CurrentRow.Index;
+            dsPhatSinh.Tables["PhatSinh"].Rows[row][1] = dtpNgay.Value.ToString();
+            dsPhatSinh.Tables["PhatSinh"].Rows[row][2] = cboLoai.Text;
+            dsPhatSinh.Tables["PhatSinh"].Rows[row][3] = txtPhieu.Text;
+            dsPhatSinh.Tables["PhatSinh"].Rows[row][4] = txtKhachHang.Text;
+            dsPhatSinh.Tables["PhatSinh"].Rows[row][5] = txtLyDo.Text;
+            dsPhatSinh.Tables["PhatSinh"].Rows[row][6] = cboTenHang.Text;
+            dsPhatSinh.Tables["PhatSinh"].Rows[row][7] = sl;
+            dsPhatSinh.Tables["PhatSinh"].Rows[row][8] = dg;
+            dsPhatSinh.Tables["PhatSinh"].Rows[row][9] = cboNhanVien.Text;
+            GanDuLieu();
+            DieuKhienKhiBinhThuong();
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
