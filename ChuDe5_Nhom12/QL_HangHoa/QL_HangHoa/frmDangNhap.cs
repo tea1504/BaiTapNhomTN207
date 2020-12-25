@@ -11,24 +11,24 @@ using System.Windows.Forms;
 
 namespace QL_HangHoa
 {
-    public partial class frmDangNhap : Form
+    public partial class frmDangNhap: Form
     {
         private frmMain fMain;
         public frmDangNhap()
         {
             InitializeComponent();
         }
-
+        public frmDangNhap(frmMain fm) : this()
+        {
+            fMain = fm;
+        }
         private void frmDangNhap_Load(object sender, EventArgs e)
         {
             txtMK.PasswordChar = '*';
             txtTK.Focus();
         }
-        public frmDangNhap(frmMain fm) : this()
-        {
-            fMain = fm;
-        }
-        private void btDN_Click(object sender, EventArgs e)
+
+        private void btnDN_Click(object sender, EventArgs e)
         {
             SqlCommand cmd;
             SqlDataReader dr;
@@ -77,7 +77,7 @@ namespace QL_HangHoa
             }
         }
 
-        private void btThoat_Click(object sender, EventArgs e)
+        private void btnThoat_Click(object sender, EventArgs e)
         {
             fMain.mnuDuLieu.Enabled = false;
             fMain.mnuTienIch.Enabled = false;

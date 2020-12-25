@@ -30,3 +30,6 @@ C:\Users\DELL\Source\Repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_H
 C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csprojAssemblyReference.cache
 C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csproj.CoreCompileInputs.cache
 C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmPhatSinh.resources
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\bin\Debug\QL_HangHoa.exe.config
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.exe
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.pdb
