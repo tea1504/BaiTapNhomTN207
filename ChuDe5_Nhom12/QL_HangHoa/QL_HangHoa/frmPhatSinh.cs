@@ -150,11 +150,11 @@ namespace QL_HangHoa
 
         private void frmPhatSinh_Load(object sender, EventArgs e)
         {
-            string strSelect = "SELECT PhatSinh.Sott, PhatSinh.Ngay, PhatSinh.Loai, PhatSinh.Phieu, PhatSinh.KhachHang, PhatSinh.LyDo, HangHoa.TenHang, PhatSinh.SoLg, PhatSinh.Dgia, NhanVien.HoLot + ' ' + NhanVien.Ten AS htnv FROM PhatSinh LEFT JOIN HangHoa ON PhatSinh.MaHang = HangHoa.MaHang LEFT JOIN NhanVien ON PhatSinh.MaNV = NhanVien.MaNV ORDER BY PhatSinh.Sott";
+            string strSelect = "SELECT PhatSinh.Sott, PhatSinh.Ngay, PhatSinh.Loai, PhatSinh.Phieu, PhatSinh.KhachHang, PhatSinh.LyDo, HangHoa.TenHang + ' (' + HangHoa.DVtinh + ')' AS TenHang, PhatSinh.SoLg, PhatSinh.Dgia, NhanVien.MaNV + ' - ' + NhanVien.HoLot + ' ' + NhanVien.Ten AS htnv FROM PhatSinh LEFT JOIN HangHoa ON PhatSinh.MaHang = HangHoa.MaHang LEFT JOIN NhanVien ON PhatSinh.MaNV = NhanVien.MaNV ORDER BY PhatSinh.Sott";
             MyPublics.OpenData(strSelect, dsPhatSinh, "PhatSinh");
-            strSelect = "SELECT MaHang, TenHang FROM HangHoa";
+            strSelect = "SELECT MaHang, TenHang + ' (' + DVTinh + ')' AS TenHang  FROM HangHoa";
             MyPublics.OpenData(strSelect, dsTenHang, "HangHoa");
-            strSelect = "SELECT MaNV, HoLot + ' ' + Ten AS HoTen FROM NhanVien";
+            strSelect = "SELECT MaNV,MaNV + ' - ' + HoLot + ' ' + Ten AS HoTen FROM NhanVien";
             MyPublics.OpenData(strSelect, dsNhanVien, "NhanVien");
             dsLoai.Tables.Add("DSLoai");
             dsLoai.Tables["DSLoai"].Columns.Add("Loai");
@@ -338,6 +338,24 @@ namespace QL_HangHoa
                 }
                 else
                     CapNhat();
+            }
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DialogResult blnDongY;
+            blnDongY = MessageBox.Show("Bạn có chắc chắn muốn xóa phát sinh " + txtSoThuTu.Text + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (blnDongY == DialogResult.Yes)
+            {
+                string strSql = "DELETE FROM PhatSinh WHERE Sott=@Sott";
+                if (MyPublics.conMyConnection.State == ConnectionState.Closed)
+                    MyPublics.conMyConnection.Open();
+                SqlCommand cmdCommand = new SqlCommand(strSql, MyPublics.conMyConnection);
+                cmdCommand.Parameters.AddWithValue("@Sott", txtSoThuTu.Text);
+                cmdCommand.ExecuteNonQuery();
+                MyPublics.conMyConnection.Close();
+                dsPhatSinh.Tables["PhatSinh"].Rows.RemoveAt(dgvPhatSinh.CurrentRow.Index);
+                GanDuLieu();
             }
         }
     }
