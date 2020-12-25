@@ -340,5 +340,23 @@ namespace QL_HangHoa
                     CapNhat();
             }
         }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DialogResult blnDongY;
+            blnDongY = MessageBox.Show("Bạn có chắc chắn muốn xóa phát sinh " + txtSoThuTu.Text + " không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (blnDongY == DialogResult.Yes)
+            {
+                string strSql = "DELETE FROM PhatSinh WHERE Sott=@Sott";
+                if (MyPublics.conMyConnection.State == ConnectionState.Closed)
+                    MyPublics.conMyConnection.Open();
+                SqlCommand cmdCommand = new SqlCommand(strSql, MyPublics.conMyConnection);
+                cmdCommand.Parameters.AddWithValue("@Sott", txtSoThuTu.Text);
+                cmdCommand.ExecuteNonQuery();
+                MyPublics.conMyConnection.Close();
+                dsPhatSinh.Tables["PhatSinh"].Rows.RemoveAt(dgvPhatSinh.CurrentRow.Index);
+                GanDuLieu();
+            }
+        }
     }
 }
