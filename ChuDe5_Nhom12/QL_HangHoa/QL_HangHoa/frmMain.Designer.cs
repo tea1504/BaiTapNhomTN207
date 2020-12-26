@@ -106,19 +106,19 @@
             // mnuDangNhap
             // 
             this.mnuDangNhap.Name = "mnuDangNhap";
-            this.mnuDangNhap.Size = new System.Drawing.Size(167, 22);
+            this.mnuDangNhap.Size = new System.Drawing.Size(180, 22);
             this.mnuDangNhap.Text = "Đăng Nhập";
             // 
             // mnuThoatDangNhap
             // 
             this.mnuThoatDangNhap.Name = "mnuThoatDangNhap";
-            this.mnuThoatDangNhap.Size = new System.Drawing.Size(167, 22);
+            this.mnuThoatDangNhap.Size = new System.Drawing.Size(180, 22);
             this.mnuThoatDangNhap.Text = "Thoát Đăng Nhập";
             // 
             // mnuDoiMatKhau
             // 
             this.mnuDoiMatKhau.Name = "mnuDoiMatKhau";
-            this.mnuDoiMatKhau.Size = new System.Drawing.Size(167, 22);
+            this.mnuDoiMatKhau.Size = new System.Drawing.Size(180, 22);
             this.mnuDoiMatKhau.Text = "Đổi Mật Khẩu";
             // 
             // mnuGioiThieu
