@@ -26,7 +26,7 @@ namespace QL_HangHoa
 
         void GanDuLieu()
         {
-            if(dgvPhatSinh.Rows.Count > 0)
+            if (dgvPhatSinh.Rows.Count > 0)
             {
                 int row = dgvPhatSinh.CurrentRow.Index;
                 txtSoThuTu.Text = dgvPhatSinh[0, row].Value.ToString();
@@ -59,21 +59,30 @@ namespace QL_HangHoa
 
         void DieuKhienKhiBinhThuong()
         {
-            if(MyPublics.strQuyenSD == "Quản lý")
+            if (MyPublics.strQuyenSD == "Quản lý")
             {
                 btnThem.Enabled = true;
+                btnThem.BackColor = Color.FromArgb(116, 185, 255);
                 btnSua.Enabled = true;
+                btnSua.BackColor = Color.FromArgb(116, 185, 255);
                 btnXoa.Enabled = true;
+                btnXoa.BackColor = Color.FromArgb(116, 185, 255);
             }
             else
             {
                 btnThem.Enabled = false;
+                btnThem.BackColor = Color.FromArgb(223, 230, 233);
                 btnSua.Enabled = false;
+                btnSua.BackColor = Color.FromArgb(223, 230, 233);
                 btnXoa.Enabled = false;
+                btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             }
             btnLuu.Enabled = false;
+            btnLuu.BackColor = Color.FromArgb(223, 230, 233);
             btnKhongLuu.Enabled = false;
+            btnKhongLuu.BackColor = Color.FromArgb(223, 230, 233);
             btnDong.Enabled = true;
+            btnDong.BackColor = Color.FromArgb(116, 185, 255);
             txtSoThuTu.ReadOnly = true;
             txtSoThuTu.Visible = true;
             lblSoThuTu.Text = "Số thứ tự:";
@@ -98,11 +107,17 @@ namespace QL_HangHoa
         void DieuKhienKhiThemMoi()
         {
             btnThem.Enabled = false;
+            btnThem.BackColor = Color.FromArgb(223, 230, 233);
             btnSua.Enabled = false;
+            btnSua.BackColor = Color.FromArgb(223, 230, 233);
             btnXoa.Enabled = false;
+            btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             btnLuu.Enabled = true;
+            btnLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnKhongLuu.Enabled = true;
+            btnKhongLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnDong.Enabled = false;
+            btnDong.BackColor = Color.FromArgb(223, 230, 233);
             dtpNgay.Enabled = true;
             cboLoai.Enabled = true;
             txtPhieu.ReadOnly = false;
@@ -131,11 +146,17 @@ namespace QL_HangHoa
         void DieuKhienThiChinhSua()
         {
             btnThem.Enabled = false;
+            btnThem.BackColor = Color.FromArgb(223, 230, 233);
             btnSua.Enabled = false;
+            btnSua.BackColor = Color.FromArgb(223, 230, 233);
             btnXoa.Enabled = false;
+            btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             btnLuu.Enabled = true;
+            btnLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnKhongLuu.Enabled = true;
+            btnKhongLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnDong.Enabled = false;
+            btnDong.BackColor = Color.FromArgb(223, 230, 233);
             dtpNgay.Enabled = true;
             cboLoai.Enabled = true;
             txtPhieu.ReadOnly = false;
@@ -255,14 +276,14 @@ namespace QL_HangHoa
             float f;
             if (txtSoLuong.Text.Trim() == "") txtSoLuong.Text = "0";
             if (txtDonGia.Text.Trim() == "") txtDonGia.Text = "0";
-            if(!float.TryParse(txtSoLuong.Text, out f))
+            if (!float.TryParse(txtSoLuong.Text, out f))
             {
                 MessageBox.Show("Bạn phải nhập số lượng là số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtSoLuong.Clear();
                 txtSoLuong.Focus();
                 return false;
             }
-            else if(!float.TryParse(txtDonGia.Text, out f))
+            else if (!float.TryParse(txtDonGia.Text, out f))
             {
                 MessageBox.Show("Bạn phải nhập đơn giá là số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtDonGia.Clear();
@@ -279,21 +300,21 @@ namespace QL_HangHoa
                 MyPublics.conMyConnection.Open();
             SqlCommand cmdCommand = new SqlCommand(strSql, MyPublics.conMyConnection);
             cmdCommand.Parameters.AddWithValue("@Ngay", dtpNgay.Value);
-            if(cboLoai.SelectedIndex==-1)
+            if (cboLoai.SelectedIndex == -1)
                 cmdCommand.Parameters.AddWithValue("@Loai", DBNull.Value);
             else
                 cmdCommand.Parameters.AddWithValue("@Loai", cboLoai.SelectedValue.ToString());
             cmdCommand.Parameters.AddWithValue("@Phieu", txtPhieu.Text);
             cmdCommand.Parameters.AddWithValue("@KhachHang", txtKhachHang.Text);
             cmdCommand.Parameters.AddWithValue("@LyDo", txtLyDo.Text);
-            if(cboTenHang.SelectedIndex==-1)
+            if (cboTenHang.SelectedIndex == -1)
                 cmdCommand.Parameters.AddWithValue("@MaHang", DBNull.Value);
             else
                 cmdCommand.Parameters.AddWithValue("@MaHang", cboTenHang.SelectedValue.ToString());
-            float sl = float.Parse(txtSoLuong.Text), dg = float.Parse(txtDonGia.Text); 
+            float sl = float.Parse(txtSoLuong.Text), dg = float.Parse(txtDonGia.Text);
             cmdCommand.Parameters.AddWithValue("@SoLg", sl);
             cmdCommand.Parameters.AddWithValue("@Dgia", dg);
-            if(cboNhanVien.SelectedIndex==-1)
+            if (cboNhanVien.SelectedIndex == -1)
                 cmdCommand.Parameters.AddWithValue("@MaNV", DBNull.Value);
             else
                 cmdCommand.Parameters.AddWithValue("@MaNV", cboNhanVien.SelectedValue.ToString());
@@ -377,11 +398,6 @@ namespace QL_HangHoa
                 dsPhatSinh.Tables["PhatSinh"].Rows.RemoveAt(dgvPhatSinh.CurrentRow.Index);
                 GanDuLieu();
             }
-        }
-
-        private void txtSoThuTu_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
