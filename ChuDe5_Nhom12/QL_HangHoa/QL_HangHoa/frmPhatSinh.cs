@@ -62,27 +62,18 @@ namespace QL_HangHoa
             if(MyPublics.strQuyenSD == "Quản lý")
             {
                 btnThem.Enabled = true;
-                btnThem.BackColor = Color.FromArgb(116, 185, 255);
                 btnSua.Enabled = true;
-                btnSua.BackColor = Color.FromArgb(116, 185, 255);
                 btnXoa.Enabled = true;
-                btnXoa.BackColor = Color.FromArgb(116, 185, 255);
             }
             else
             {
                 btnThem.Enabled = false;
-                btnThem.BackColor = Color.FromArgb(223, 230, 233);
                 btnSua.Enabled = false;
-                btnSua.BackColor = Color.FromArgb(223, 230, 233);
                 btnXoa.Enabled = false;
-                btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             }
             btnLuu.Enabled = false;
-            btnLuu.BackColor = Color.FromArgb(223, 230, 233);
             btnKhongLuu.Enabled = false;
-            btnKhongLuu.BackColor = Color.FromArgb(223, 230, 233);
             btnDong.Enabled = true;
-            btnDong.BackColor = Color.FromArgb(116, 185, 255);
             txtSoThuTu.ReadOnly = true;
             txtSoThuTu.Visible = true;
             lblSoThuTu.Text = "Số thứ tự:";
@@ -107,17 +98,11 @@ namespace QL_HangHoa
         void DieuKhienKhiThemMoi()
         {
             btnThem.Enabled = false;
-            btnThem.BackColor = Color.FromArgb(223, 230, 233);
             btnSua.Enabled = false;
-            btnSua.BackColor = Color.FromArgb(223, 230, 233);
             btnXoa.Enabled = false;
-            btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             btnLuu.Enabled = true;
-            btnLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnKhongLuu.Enabled = true;
-            btnKhongLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnDong.Enabled = false;
-            btnDong.BackColor = Color.FromArgb(223, 230, 233);
             dtpNgay.Enabled = true;
             cboLoai.Enabled = true;
             txtPhieu.ReadOnly = false;
@@ -146,17 +131,11 @@ namespace QL_HangHoa
         void DieuKhienThiChinhSua()
         {
             btnThem.Enabled = false;
-            btnThem.BackColor = Color.FromArgb(223, 230, 233);
             btnSua.Enabled = false;
-            btnSua.BackColor = Color.FromArgb(223, 230, 233);
             btnXoa.Enabled = false;
-            btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             btnLuu.Enabled = true;
-            btnLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnKhongLuu.Enabled = true;
-            btnKhongLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnDong.Enabled = false;
-            btnDong.BackColor = Color.FromArgb(223, 230, 233);
             dtpNgay.Enabled = true;
             cboLoai.Enabled = true;
             txtPhieu.ReadOnly = false;
@@ -398,6 +377,11 @@ namespace QL_HangHoa
                 dsPhatSinh.Tables["PhatSinh"].Rows.RemoveAt(dgvPhatSinh.CurrentRow.Index);
                 GanDuLieu();
             }
+        }
+
+        private void txtSoThuTu_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
