@@ -35,3 +35,14 @@ E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangH
 E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.pdb
 C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmNhanVien.resources
 C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmLoaiHang.resources
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\bin\Debug\QL_HangHoa.exe
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\bin\Debug\QL_HangHoa.pdb
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csprojResolveAssemblyReference.cache
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmDangNhap.resources
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmHangHoa.resources
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmLoaiHang.resources
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmMain.resources
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmNhanVien.resources
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmPhatSinh.resources
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.Properties.Resources.resources
+E:\Walnut\.Net\QL_HangHoa\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.csproj.GenerateResource.Cache

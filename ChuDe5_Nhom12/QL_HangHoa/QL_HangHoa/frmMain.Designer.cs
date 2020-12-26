@@ -109,6 +109,7 @@
             this.mnuDangNhap.Name = "mnuDangNhap";
             this.mnuDangNhap.Size = new System.Drawing.Size(167, 22);
             this.mnuDangNhap.Text = "Đăng Nhập";
+            this.mnuDangNhap.Click += new System.EventHandler(this.mnuDangNhap_Click);
             // 
             // mnuThoatDangNhap
             // 
