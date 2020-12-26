@@ -56,5 +56,11 @@ namespace QL_HangHoa
             frmDangNhap frmDN = new frmDangNhap(this);
             frmDN.ShowDialog();
         }
+
+        private void mnuNhanVien_Click(object sender, EventArgs e)
+        {
+            frmNhanVien frmNV = new frmNhanVien();
+            frmNV.Show();
+        }
     }
 }

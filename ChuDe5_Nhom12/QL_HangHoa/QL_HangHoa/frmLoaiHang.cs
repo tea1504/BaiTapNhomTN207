@@ -175,5 +175,10 @@ namespace QL_HangHoa
         {
             Close();
         }
+
+        private void dgvLoai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            GanDuLieu();
+        }
     }
 }
