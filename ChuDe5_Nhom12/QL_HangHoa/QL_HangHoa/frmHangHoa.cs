@@ -28,18 +28,27 @@ namespace QL_HangHoa
             if (MyPublics.strQuyenSD == "Quản lý")
             {
                 btnThem.Enabled = true;
+                btnThem.BackColor = Color.FromArgb(116, 185, 255);
                 btnSua.Enabled = true;
-                btnSua.Enabled = true;
+                btnSua.BackColor = Color.FromArgb(116, 185, 255);
+                btnXoa.Enabled = true;
+                btnXoa.BackColor = Color.FromArgb(116, 185, 255);
             }
             else
             {
                 btnThem.Enabled = false;
+                btnThem.BackColor = Color.FromArgb(223, 230, 233);
                 btnSua.Enabled = false;
+                btnSua.BackColor = Color.FromArgb(223, 230, 233);
                 btnXoa.Enabled = false;
+                btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             }
             btnLuu.Enabled = false;
+            btnLuu.BackColor = Color.FromArgb(223, 230, 233);
             btnKhongLuu.Enabled = false;
+            btnKhongLuu.BackColor = Color.FromArgb(223, 230, 233);
             btnDong.Enabled = true;
+            btnDong.BackColor = Color.FromArgb(116, 185, 255);
             txtMaHang.ReadOnly = true;
             txtMaHang.BackColor = Color.White;
             txtTenHang.ReadOnly = true;
@@ -52,11 +61,17 @@ namespace QL_HangHoa
         void DieuKhienKhiThemMoi() 
         {
             btnThem.Enabled = false;
+            btnThem.BackColor = Color.FromArgb(223, 230, 233);
             btnSua.Enabled = false;
+            btnSua.BackColor = Color.FromArgb(223, 230, 233);
             btnXoa.Enabled = false;
+            btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             btnLuu.Enabled = true;
+            btnLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnKhongLuu.Enabled = true;
+            btnKhongLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnDong.Enabled = false;
+            btnDong.BackColor = Color.FromArgb(223, 230, 233);
             txtMaHang.ReadOnly = false;
             txtTenHang.ReadOnly = false;
             txtMaHang.Clear();
@@ -71,11 +86,17 @@ namespace QL_HangHoa
         void DieuKhienKhiChinhSua() 
         {
             btnThem.Enabled = false;
+            btnThem.BackColor = Color.FromArgb(223, 230, 233);
             btnSua.Enabled = false;
+            btnSua.BackColor = Color.FromArgb(223, 230, 233);
             btnXoa.Enabled = false;
+            btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             btnLuu.Enabled = true;
+            btnLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnKhongLuu.Enabled = true;
+            btnKhongLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnDong.Enabled = false;
+            btnDong.BackColor = Color.FromArgb(223, 230, 233);
             txtTenHang.ReadOnly = false;
             txtTenHang.Focus();
             cboDonViTinh.Enabled = true;

@@ -37,8 +37,8 @@ namespace QL_HangHoa
             btnLuu.Enabled = false;
             btnKoLuu.Enabled = false;
             btnDong.Enabled = true;
-            cbbMa.Enabled = false;
-            cbbTenLoai.Enabled = false;
+            txtMa.Enabled = false;
+            txtTen.Enabled = false;
             dgvLoai.Enabled = true;
         }
         void DieuKhienKhiThemMoi()
@@ -49,8 +49,8 @@ namespace QL_HangHoa
             btnLuu.Enabled = true;
             btnKoLuu.Enabled = true;
             btnDong.Enabled = false;
-            cbbMa.Enabled = true;
-            cbbTenLoai.Enabled = true;
+            txtMa.Enabled = true;
+            txtTen.Enabled = true;
             //cbbMa.SelectedIndex = -1;
             //cbbTenLoai.SelectedIndex = -1;
             dgvLoai.Enabled = false;
@@ -63,22 +63,21 @@ namespace QL_HangHoa
             btnLuu.Enabled = true;
             btnKoLuu.Enabled = true;
             btnDong.Enabled = false;
-            cbbMa.Enabled = true;
-            cbbTenLoai.Enabled = true;
+            txtMa.Enabled = true;
+            txtTen.Enabled = true;
             dgvLoai.Enabled = false;
         }
         void GanDuLieu()
         {
             if (dgvLoai.Rows.Count > 0)
             {
-                int row = dgvLoai.CurrentRow.Index;
-                cbbMa.SelectedValue = dgvLoai[0, row].Value.ToString();
-                cbbTenLoai.SelectedIndex = cbbTenLoai.FindStringExact(dgvLoai[1, row].Value.ToString());
+                txtMa.Text = dgvLoai[0, dgvLoai.CurrentRow.Index].Value.ToString();
+                txtTen.Text = dgvLoai[1, dgvLoai.CurrentRow.Index].Value.ToString();
             }
             else
             {
-                cbbMa.SelectedIndex = -1;
-                cbbTenLoai.SelectedIndex = -1;
+                txtMa.Clear();
+                txtTen.Clear();
             }
         }
         void ThucThiLuu()
@@ -87,11 +86,11 @@ namespace QL_HangHoa
             if (MyPublics.conMyConnection.State == ConnectionState.Closed)
                 MyPublics.conMyConnection.Open();
             SqlCommand cmdCommand = new SqlCommand(strSql, MyPublics.conMyConnection);
-            cmdCommand.Parameters.AddWithValue("@MaLoai", cbbMa.SelectedValue.ToString());
-            cmdCommand.Parameters.AddWithValue("@TenLoai", cbbTenLoai.SelectedValue.ToString());
+            cmdCommand.Parameters.AddWithValue("@MaLoai", txtMa.Text);
+            cmdCommand.Parameters.AddWithValue("@TenLoai", txtTen.Text);
             cmdCommand.ExecuteNonQuery();
             MyPublics.conMyConnection.Close();
-            dsLoaiHang.Tables["LoaiHang"].Rows.Add(cbbMa.Text, cbbTenLoai.Text);
+            dsLoaiHang.Tables["LoaiHang"].Rows.Add(txtMa.Text, txtTen.Text);
             blnThem = false;
             DieuKhienKhiBinhThuong();
         }
@@ -99,14 +98,10 @@ namespace QL_HangHoa
         {
             string select = "select * from LoaiHang";
             MyPublics.OpenData(select, dsLoaiHang, "LoaiHang");
-            cbbMa.DataSource = dsLoaiHang.Tables["MaLoai"];
-            cbbMa.DisplayMember = "MaLoai";
-            cbbMa.ValueMember = "MaLoai";
-            cbbMa.DataSource = dsLoaiHang.Tables["TenLoai"];
-            cbbTenLoai.DisplayMember = "TenLoai";
-            cbbTenLoai.ValueMember = "TenLoai";
             dgvLoai.DataSource = dsLoaiHang;
             dgvLoai.DataMember = "LoaiHang";
+            txtMa.MaxLength = 20;
+            txtTen.MaxLength = 20;
             dgvLoai.Width = 220;
             dgvLoai.AllowUserToAddRows = false;
             dgvLoai.AllowUserToDeleteRows = false;
@@ -132,21 +127,21 @@ namespace QL_HangHoa
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (MyPublics.TonTaiKhoaChinh(cbbMa.Text, "MaLoai", "HangHoa"))
+            if (MyPublics.TonTaiKhoaChinh(txtMa.Text, "MaLoai", "HangHoa"))
             {
-                MessageBox.Show("Bạn phải xóa những loại hàng hóa thuộc " + cbbMa.Text + " trước", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn phải xóa những loại hàng hóa thuộc " + txtMa.Text + " trước", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 DialogResult blnDongY;
-                blnDongY = MessageBox.Show("Bạn có chắn chắn muốn xóa loại hàng " + cbbMa.Text + " (" + cbbTenLoai.Text + ")", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                blnDongY = MessageBox.Show("Bạn có chắn chắn muốn xóa loại hàng " + txtMa.Text + " (" + txtTen.Text + ")", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (blnDongY == DialogResult.Yes)
                 {
                     string strSql = "delete LoaiHang where MaLoai = @MaLoai";
                     if (MyPublics.conMyConnection.State == ConnectionState.Closed)
                         MyPublics.conMyConnection.Open();
                     SqlCommand cmdCommand = new SqlCommand(strSql, MyPublics.conMyConnection);
-                    cmdCommand.Parameters.AddWithValue("@MaLoai", cbbMa.Text);
+                    cmdCommand.Parameters.AddWithValue("@MaLoai", txtMa.Text);
                     cmdCommand.ExecuteNonQuery();
                     MyPublics.conMyConnection.Close();
                     dsLoaiHang.Tables["LoaiHang"].Rows.RemoveAt(dgvLoai.CurrentRow.Index);
@@ -157,13 +152,13 @@ namespace QL_HangHoa
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if ((cbbMa.Text == "") || (cbbTenLoai.Text == "")) MessageBox.Show("Lỗi nhập dữ liệu!");
+            if ((txtMa.Text == "") || (txtTen.Text == "")) MessageBox.Show("Lỗi nhập dữ liệu!");
             else
             {
-                if (MyPublics.TonTaiKhoaChinh(cbbMa.Text, "MaLoai", "LoaiHang"))
+                if (MyPublics.TonTaiKhoaChinh(txtMa.Text, "MaLoai", "LoaiHang"))
                 {
                     MessageBox.Show("Mã số loại hàng này đã có rồi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    cbbMa.Focus();
+                    txtMa.Focus();
                 }
                 else ThucThiLuu();
             }
@@ -179,6 +174,11 @@ namespace QL_HangHoa
         private void btnDong_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void dgvLoai_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            GanDuLieu();
         }
     }
 }
