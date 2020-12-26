@@ -39,7 +39,7 @@ namespace QL_HangHoa
                 if (MyPublics.conMyConnection.State != ConnectionState.Closed)
                 {
                     MyPublics.strMaNV = txtTK.Text;
-                    strpwd = txtMK.Text;
+                    strpwd = MyPublics.MaHoaPassWord(txtMK.Text);
                     sqlselect = "Select MaNV, QuyenSD from NhanVien Where MaNV = @MaNV and MatKhau = @MatKhau";
                     cmd = new SqlCommand(sqlselect, MyPublics.conMyConnection);
                     cmd.Parameters.AddWithValue("@MaNV", MyPublics.strMaNV);
@@ -80,7 +80,7 @@ namespace QL_HangHoa
         private void btnThoat_Click(object sender, EventArgs e)
         {
             fMain.mnuDuLieu.Enabled = false;
-            fMain.mnuTienIch.Enabled = false;
+            fMain.mnuTienIch.Enabled = true;
             fMain.mnuThoatDangNhap.Enabled = false;
             fMain.mnuDoiMatKhau.Enabled = false;
             Close();

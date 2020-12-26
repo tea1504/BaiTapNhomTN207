@@ -69,26 +69,27 @@
             // mnuNhanVien
             // 
             this.mnuNhanVien.Name = "mnuNhanVien";
-            this.mnuNhanVien.Size = new System.Drawing.Size(129, 22);
+            this.mnuNhanVien.Size = new System.Drawing.Size(152, 22);
             this.mnuNhanVien.Text = "Nhân Viên";
             // 
             // mnuHangHoa
             // 
             this.mnuHangHoa.Name = "mnuHangHoa";
-            this.mnuHangHoa.Size = new System.Drawing.Size(129, 22);
+            this.mnuHangHoa.Size = new System.Drawing.Size(152, 22);
             this.mnuHangHoa.Text = "Hàng Hóa";
             this.mnuHangHoa.Click += new System.EventHandler(this.mnuHangHoa_Click);
             // 
             // mnuLoaiHang
             // 
             this.mnuLoaiHang.Name = "mnuLoaiHang";
-            this.mnuLoaiHang.Size = new System.Drawing.Size(129, 22);
+            this.mnuLoaiHang.Size = new System.Drawing.Size(152, 22);
             this.mnuLoaiHang.Text = "Loại Hàng";
+            this.mnuLoaiHang.Click += new System.EventHandler(this.mnuLoaiHang_Click);
             // 
             // mnuPhatSinh
             // 
             this.mnuPhatSinh.Name = "mnuPhatSinh";
-            this.mnuPhatSinh.Size = new System.Drawing.Size(129, 22);
+            this.mnuPhatSinh.Size = new System.Drawing.Size(152, 22);
             this.mnuPhatSinh.Text = "Phát Sinh";
             this.mnuPhatSinh.Click += new System.EventHandler(this.mnuPhatSinh_Click);
             // 
@@ -108,6 +109,7 @@
             this.mnuDangNhap.Name = "mnuDangNhap";
             this.mnuDangNhap.Size = new System.Drawing.Size(167, 22);
             this.mnuDangNhap.Text = "Đăng Nhập";
+            this.mnuDangNhap.Click += new System.EventHandler(this.mnuDangNhap_Click);
             // 
             // mnuThoatDangNhap
             // 
@@ -124,7 +126,7 @@
             // mnuGioiThieu
             // 
             this.mnuGioiThieu.Name = "mnuGioiThieu";
-            this.mnuGioiThieu.Size = new System.Drawing.Size(180, 22);
+            this.mnuGioiThieu.Size = new System.Drawing.Size(167, 22);
             this.mnuGioiThieu.Text = "Giới Thiệu";
             this.mnuGioiThieu.Click += new System.EventHandler(this.mnuGioiThieu_Click);
             // 
