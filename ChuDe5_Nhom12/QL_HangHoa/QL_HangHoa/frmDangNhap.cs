@@ -39,7 +39,7 @@ namespace QL_HangHoa
                 if (MyPublics.conMyConnection.State != ConnectionState.Closed)
                 {
                     MyPublics.strMaNV = txtTK.Text;
-                    strpwd = txtMK.Text;
+                    strpwd = MyPublics.MaHoaPassWord(txtMK.Text);
                     sqlselect = "Select MaNV, QuyenSD from NhanVien Where MaNV = @MaNV and MatKhau = @MatKhau";
                     cmd = new SqlCommand(sqlselect, MyPublics.conMyConnection);
                     cmd.Parameters.AddWithValue("@MaNV", MyPublics.strMaNV);
