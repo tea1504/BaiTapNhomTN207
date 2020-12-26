@@ -99,6 +99,7 @@
             // 
             // btnThem
             // 
+            this.btnThem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Location = new System.Drawing.Point(39, 395);
             this.btnThem.Name = "btnThem";
@@ -110,6 +111,7 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Location = new System.Drawing.Point(39, 457);
             this.btnLuu.Name = "btnLuu";
@@ -121,6 +123,7 @@
             // 
             // btnSua
             // 
+            this.btnSua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Location = new System.Drawing.Point(160, 395);
             this.btnSua.Name = "btnSua";
@@ -132,6 +135,7 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Location = new System.Drawing.Point(280, 395);
             this.btnXoa.Name = "btnXoa";
@@ -143,6 +147,7 @@
             // 
             // btnKoLuu
             // 
+            this.btnKoLuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKoLuu.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKoLuu.Location = new System.Drawing.Point(160, 457);
             this.btnKoLuu.Name = "btnKoLuu";
@@ -154,19 +159,22 @@
             // 
             // btnDong
             // 
+            this.btnDong.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDong.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDong.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDong.Location = new System.Drawing.Point(280, 457);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(105, 37);
             this.btnDong.TabIndex = 13;
             this.btnDong.Text = "Đóng";
-            this.btnDong.UseVisualStyleBackColor = true;
+            this.btnDong.UseVisualStyleBackColor = false;
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
             // frmLoaiHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(428, 506);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnKoLuu);

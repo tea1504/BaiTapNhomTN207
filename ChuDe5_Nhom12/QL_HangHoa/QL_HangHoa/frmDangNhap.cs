@@ -80,7 +80,7 @@ namespace QL_HangHoa
         private void btnThoat_Click(object sender, EventArgs e)
         {
             fMain.mnuDuLieu.Enabled = false;
-            fMain.mnuTienIch.Enabled = false;
+            fMain.mnuTienIch.Enabled = true;
             fMain.mnuThoatDangNhap.Enabled = false;
             fMain.mnuDoiMatKhau.Enabled = false;
             Close();
