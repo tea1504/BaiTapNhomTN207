@@ -265,6 +265,7 @@ namespace QL_HangHoa
             this.dgvPhatSinh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPhatSinh.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvPhatSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhatSinh.Location = new System.Drawing.Point(27, 539);
             this.dgvPhatSinh.Name = "dgvPhatSinh";
@@ -371,6 +372,7 @@ namespace QL_HangHoa
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(42)))), ((int)(((byte)(86)))));
             this.groupBox1.Location = new System.Drawing.Point(295, 135);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(592, 381);
