@@ -80,6 +80,7 @@
             this.dgvLoai.Name = "dgvLoai";
             this.dgvLoai.Size = new System.Drawing.Size(346, 200);
             this.dgvLoai.TabIndex = 5;
+            this.dgvLoai.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLoai_CellClick);
             // 
             // btnThem
             // 
