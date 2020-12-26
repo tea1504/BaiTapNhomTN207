@@ -30,9 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbbMa = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbbTenLoai = new System.Windows.Forms.ComboBox();
             this.dgvLoai = new System.Windows.Forms.DataGridView();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -40,6 +38,8 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnKoLuu = new System.Windows.Forms.Button();
             this.btnDong = new System.Windows.Forms.Button();
+            this.txtMa = new System.Windows.Forms.TextBox();
+            this.txtTen = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoai)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,14 +63,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã loại hàng";
             // 
-            // cbbMa
-            // 
-            this.cbbMa.FormattingEnabled = true;
-            this.cbbMa.Location = new System.Drawing.Point(194, 78);
-            this.cbbMa.Name = "cbbMa";
-            this.cbbMa.Size = new System.Drawing.Size(191, 21);
-            this.cbbMa.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -80,14 +72,6 @@
             this.label3.Size = new System.Drawing.Size(71, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "Tên hàng";
-            // 
-            // cbbTenLoai
-            // 
-            this.cbbTenLoai.FormattingEnabled = true;
-            this.cbbTenLoai.Location = new System.Drawing.Point(194, 126);
-            this.cbbTenLoai.Name = "cbbTenLoai";
-            this.cbbTenLoai.Size = new System.Drawing.Size(191, 21);
-            this.cbbTenLoai.TabIndex = 4;
             // 
             // dgvLoai
             // 
@@ -170,12 +154,28 @@
             this.btnDong.UseVisualStyleBackColor = false;
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
             // 
+            // txtMa
+            // 
+            this.txtMa.Location = new System.Drawing.Point(165, 76);
+            this.txtMa.Name = "txtMa";
+            this.txtMa.Size = new System.Drawing.Size(220, 20);
+            this.txtMa.TabIndex = 14;
+            // 
+            // txtTen
+            // 
+            this.txtTen.Location = new System.Drawing.Point(165, 126);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(220, 20);
+            this.txtTen.TabIndex = 15;
+            // 
             // frmLoaiHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(428, 506);
+            this.Controls.Add(this.txtTen);
+            this.Controls.Add(this.txtMa);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnKoLuu);
             this.Controls.Add(this.btnXoa);
@@ -183,9 +183,7 @@
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dgvLoai);
-            this.Controls.Add(this.cbbTenLoai);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cbbMa);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmLoaiHang";
@@ -201,9 +199,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cbbMa;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbbTenLoai;
         private System.Windows.Forms.DataGridView dgvLoai;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnLuu;
@@ -211,5 +207,7 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnKoLuu;
         private System.Windows.Forms.Button btnDong;
+        private System.Windows.Forms.TextBox txtMa;
+        private System.Windows.Forms.TextBox txtTen;
     }
 }
