@@ -226,6 +226,7 @@ namespace QL_HangHoa
             DieuKhienKhiBinhThuong();
         }
 
+        
         private void dgvPhatSinh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             GanDuLieu();
