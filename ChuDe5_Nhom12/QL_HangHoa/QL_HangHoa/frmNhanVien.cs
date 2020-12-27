@@ -335,8 +335,6 @@ namespace QL_HangHoa
 
             }
         }
-
-        
     }
 }
 
