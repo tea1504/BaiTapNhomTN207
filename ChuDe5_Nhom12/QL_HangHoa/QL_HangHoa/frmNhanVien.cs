@@ -169,7 +169,7 @@ namespace QL_HangHoa
         {
             string strSelect = " Select * From Nhanvien";
             MyPublics.OpenData(strSelect, dsNV, "NhanVien");
-            strSelect = "Select MaNV,HoLoy,Ten,GioiTinh,DiaChi,Luong";
+            strSelect = "Select MaNV,HoLot,Ten,GioiTinh,DiaChi,Luong From NhanVien";
 
             MyPublics.OpenData(strSelect, dsNhanVien, "NhanVien");
 
@@ -335,6 +335,8 @@ namespace QL_HangHoa
 
             }
         }
+
+        
     }
 }
 
