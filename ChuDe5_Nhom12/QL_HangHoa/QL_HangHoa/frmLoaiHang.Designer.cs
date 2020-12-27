@@ -188,6 +188,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmLoaiHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOẠI HÀNG";
             this.Load += new System.EventHandler(this.frmLoaiHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoai)).EndInit();
