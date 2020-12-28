@@ -36,7 +36,7 @@ namespace QL_HangHoa
             try
             {
                 MyPublics.ConnectDatabase();
-                if (MyPublics.conMyConnection.State != ConnectionState.Closed)
+                if (MyPublics.conMyConnection.State == ConnectionState.Open)
                 {
                     MyPublics.strMaNV = txtTK.Text;
                     strpwd = MyPublics.MaHoaPassWord(txtMK.Text);
