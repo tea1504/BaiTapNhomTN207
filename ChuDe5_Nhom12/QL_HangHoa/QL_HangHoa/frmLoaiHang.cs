@@ -25,18 +25,27 @@ namespace QL_HangHoa
             if (MyPublics.strQuyenSD == "Quản lý")
             {
                 btnThem.Enabled = true;
+                btnThem.BackColor = Color.FromArgb(116, 185, 255);
                 btnSua.Enabled = true;
+                btnSua.BackColor = Color.FromArgb(116, 185, 255);
                 btnXoa.Enabled = true;
+                btnXoa.BackColor = Color.FromArgb(116, 185, 255);
             }
             else
             {
                 btnThem.Enabled = false;
+                btnThem.BackColor = Color.FromArgb(223, 230, 233);
                 btnSua.Enabled = false;
+                btnSua.BackColor = Color.FromArgb(223, 230, 233);
                 btnXoa.Enabled = false;
+                btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             }
             btnLuu.Enabled = false;
+            btnLuu.BackColor = Color.FromArgb(223, 230, 233);
             btnKoLuu.Enabled = false;
+            btnKoLuu.BackColor = Color.FromArgb(223, 230, 233);
             btnDong.Enabled = true;
+            btnDong.BackColor = Color.FromArgb(116, 185, 255);
             txtMa.ReadOnly = true;
             txtTen.ReadOnly = true;
             dgvLoai.Enabled = true;
@@ -49,11 +58,17 @@ namespace QL_HangHoa
             txtMa.Clear();
             txtTen.Clear();
             btnThem.Enabled = false;
+            btnThem.BackColor = Color.FromArgb(223, 230, 233);
             btnSua.Enabled = false;
+            btnSua.BackColor = Color.FromArgb(223, 230, 233);
             btnXoa.Enabled = false;
+            btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             btnLuu.Enabled = true;
+            btnLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnKoLuu.Enabled = true;
+            btnKoLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnDong.Enabled = false;
+            btnDong.BackColor = Color.FromArgb(223, 230, 233);
             txtMa.ReadOnly = false;
             txtTen.ReadOnly = false;
             txtMa.Enabled = true;
@@ -65,11 +80,17 @@ namespace QL_HangHoa
         void DieuKhienKhiChinhSua()
         {
             btnThem.Enabled = false;
+            btnThem.BackColor = Color.FromArgb(223, 230, 233);
             btnSua.Enabled = false;
+            btnSua.BackColor = Color.FromArgb(223, 230, 233);
             btnXoa.Enabled = false;
+            btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             btnLuu.Enabled = true;
+            btnLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnKoLuu.Enabled = true;
+            btnKoLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnDong.Enabled = false;
+            btnDong.BackColor = Color.FromArgb(223, 230, 233);
             txtMa.ReadOnly = true;
             txtTen.ReadOnly = false;
             txtMa.Enabled = false;
@@ -111,12 +132,12 @@ namespace QL_HangHoa
             dgvLoai.DataMember = "LoaiHang";
             txtMa.MaxLength = 20;
             txtTen.MaxLength = 20;
-            dgvLoai.Width = 350; ;
+            dgvLoai.Width = 519; ;
             dgvLoai.AllowUserToAddRows = false;
             dgvLoai.AllowUserToDeleteRows = false;
-            dgvLoai.Columns[0].Width = 50;
+            dgvLoai.Columns[0].Width = 150;
             dgvLoai.Columns[0].HeaderText = "Mã số";
-            dgvLoai.Columns[1].Width = 250;
+            dgvLoai.Columns[1].Width = 326;
             dgvLoai.Columns[1].HeaderText = "Loại hàng";
             dgvLoai.EditMode = DataGridViewEditMode.EditProgrammatically;
             GanDuLieu();
