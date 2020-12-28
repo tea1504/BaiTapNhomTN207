@@ -127,6 +127,7 @@
             this.mnuDoiMatKhau.Name = "mnuDoiMatKhau";
             this.mnuDoiMatKhau.Size = new System.Drawing.Size(202, 26);
             this.mnuDoiMatKhau.Text = "Đổi Mật Khẩu";
+            this.mnuDoiMatKhau.Click += new System.EventHandler(this.mnuDoiMatKhau_Click);
             // 
             // mnuGioiThieu
             // 

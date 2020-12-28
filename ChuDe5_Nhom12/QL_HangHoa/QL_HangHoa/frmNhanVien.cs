@@ -14,12 +14,10 @@ namespace QL_HangHoa
 {
     public partial class frmNhanVien : Form
     {
-               DataSet dsNhanVien = new DataSet();
+        DataSet dsNhanVien = new DataSet();
         DataSet dsQuyenSD = new DataSet();
         bool blnThem = false;
-        private string strNhanVien;
-        private object strGhiChu;
-        private object strQuyenSD;
+
 
         public int ThemSua { get; private set; }
 
@@ -35,20 +33,20 @@ namespace QL_HangHoa
                 txtMaNV.Text = dgvNV[0, dgvNV.CurrentRow.Index].Value.ToString();
                 txtHoLot.Text = dgvNV[1, dgvNV.CurrentRow.Index].Value.ToString();
                 txtTen.Text = dgvNV[2, dgvNV.CurrentRow.Index].Value.ToString();
-                if (dgvNV[3, dgvNV.CurrentRow.Index].Value.ToString() == "Nam")
+                if (dgvNV[3, dgvNV.CurrentRow.Index].Value.ToString() == "true")
                     rdoNam.Checked = true;
                 else
                     rdoNu.Checked = true;
-                dtpNgaySinh.Value = DateTime.Parse(dgvNV[4, dgvNV.CurrentRow.Index].Value.ToString());
-                txtDiaChi.Text = dgvNV[5, dgvNV.CurrentRow.Index].Value.ToString();
+                dtpNgaySinh.Value = DateTime.Parse(dgvNV[5, dgvNV.CurrentRow.Index].Value.ToString());
+                txtDiaChi.Text = dgvNV[4, dgvNV.CurrentRow.Index].Value.ToString();
                 txtLuong.Text = dgvNV[6, dgvNV.CurrentRow.Index].Value.ToString();
 
 
-                txtMatKhau.Text = dgvNV[7, dgvNV.CurrentRow.Index].Value.ToString();
-                txtGhiChu.Text = dgvNV[8, dgvNV.CurrentRow.Index].Value.ToString();
+                txtMatKhau.Text = dgvNV[9, dgvNV.CurrentRow.Index].Value.ToString();
+                txtGhiChu.Text = dgvNV[7, dgvNV.CurrentRow.Index].Value.ToString();
 
-                cboNhanVien.SelectedValue = dgvNV[9, dgvNV.CurrentRow.Index].Value.ToString();
-                cboQuyenSD.SelectedValue = dgvNV[10, dgvNV.CurrentRow.Index].Value.ToString();
+
+                cboQuyenSD.SelectedValue = dgvNV[8, dgvNV.CurrentRow.Index].Value.ToString();
 
             }
             else
@@ -64,11 +62,14 @@ namespace QL_HangHoa
                 txtMatKhau.Clear();
                 txtGhiChu.Clear();
 
-                cboNhanVien.SelectedIndex = -1;
+
                 cboQuyenSD.SelectedIndex = -1;
 
             }
         }
+
+
+
         void DieuKhienKhiBinhThuong()
         {
             if (MyPublics.strQuyenSD == "Quản lý")
@@ -105,7 +106,7 @@ namespace QL_HangHoa
             txtGhiChu.BackColor = Color.White;
             txtMatKhau.ReadOnly = true;
             txtMatKhau.BackColor = Color.White;
-            cboNhanVien.Enabled = false;
+
             dgvNV.Enabled = true;
 
         }
@@ -127,7 +128,6 @@ namespace QL_HangHoa
             dtpNgaySinh.Enabled = true;
             rdoNu.Checked = false;
             rdoNam.Checked = true;
-            cboNhanVien.Enabled = true;
             dgvNV.Enabled = false;
             txtMaNV.Clear();
             txtHoLot.Clear();
@@ -138,7 +138,6 @@ namespace QL_HangHoa
             txtMatKhau.Clear();
             rdoNam.Checked = true;
             dtpNgaySinh.Value = DateTime.Today;
-            cboNhanVien.SelectedIndex = -1;
             cboQuyenSD.SelectedIndex = -1;
         }
         void DieuKhienKhiChinhSua()
@@ -157,9 +156,6 @@ namespace QL_HangHoa
             txtGhiChu.ReadOnly = false;
             txtMatKhau.ReadOnly = false;
             dtpNgaySinh.Enabled = true;
-            rdoNu.Checked = false;
-            rdoNam.Checked = true;
-            cboNhanVien.Enabled = true;
             dgvNV.Enabled = false;
 
         }
@@ -168,20 +164,18 @@ namespace QL_HangHoa
         {
             string strSelect = " Select * From Nhanvien";
             MyPublics.OpenData(strSelect, dsNhanVien, "NhanVien");
-            
-
-            cboNhanVien.DataSource = dsNhanVien.Tables["NhanVien"];
-            cboNhanVien.DisplayMember = "MaNV";
-            cboNhanVien.ValueMember = "MaNV";
 
 
-            dsQuyenSD.Tables.Add("DSQuyenSd");
+
+
+
+            dsQuyenSD.Tables.Add("DSQuyenSD");
             dsQuyenSD.Tables["DSQuyenSD"].Columns.Add("QuyenSD");
-            dsQuyenSD.Tables["DSQuyenSD"].Rows.Add("User");
-            dsQuyenSD.Tables["DSQuyenSD"].Rows.Add("Quanli");
-            cboQuyenSD.DataSource = dsQuyenSD;
-            cboQuyenSD.DisplayMember = "DSQuyenSD.QuyenSD";
-            cboQuyenSD.ValueMember = "DSQuyenSD.QuyenSD";
+            dsQuyenSD.Tables["DSQuyenSD"].Rows.Add("Nhân viên");
+            dsQuyenSD.Tables["DSQuyenSD"].Rows.Add("Quản lý");
+            cboQuyenSD.DataSource = dsQuyenSD.Tables["DSQuyenSD"];
+            cboQuyenSD.DisplayMember = "QuyenSD";
+            cboQuyenSD.ValueMember = "QuyenSD";
             txtHoLot.MaxLength = 20;
             txtTen.MaxLength = 10;
             txtDiaChi.MaxLength = 20;
@@ -202,52 +196,38 @@ namespace QL_HangHoa
             dgvNV.Columns[2].HeaderText = "Tên";
             dgvNV.Columns[3].Width = 40;
             dgvNV.Columns[3].HeaderText = "Giới tính";
-            dgvNV.Columns[4].Width = 40;
-            dgvNV.Columns[4].HeaderText = "Ngày sinh";
-            dgvNV.Columns[5].Width = 80;
-            dgvNV.Columns[5].HeaderText = "Địa chỉ";
+            dgvNV.Columns[5].Width = 40;
+            dgvNV.Columns[5].HeaderText = "Ngày sinh";
+            dgvNV.Columns[4].Width = 80;
+            dgvNV.Columns[4].HeaderText = "Địa chỉ";
             dgvNV.Columns[6].Width = 40;
             dgvNV.Columns[6].HeaderText = "Lương";
-            dgvNV.Columns[7].Width = 40;
-            dgvNV.Columns[7].HeaderText = "Mật khẩu";
-            dgvNV.Columns[8].Width = 80;
-            dgvNV.Columns[8].HeaderText = "Ghi chú";
             dgvNV.Columns[9].Width = 40;
-            dgvNV.Columns[9].HeaderText = " Quyền SD";
+            dgvNV.Columns[9].HeaderText = "Mật khẩu";
+            dgvNV.Columns[7].Width = 80;
+            dgvNV.Columns[7].HeaderText = "Ghi chú";
+            dgvNV.Columns[8].Width = 40;
+            dgvNV.Columns[8].HeaderText = " Quyền SD";
             dgvNV.EditMode = DataGridViewEditMode.EditProgrammatically;
             GanDuLieu();
             DieuKhienKhiBinhThuong();
         }
 
-        private void NhanVien_CellClick(object sender, EventArgs e)
-        {
-            GanDuLieu();
-        }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            blnThem = true;
-            DieuKhienKhiThemMoi();
-        }
 
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            DieuKhienKhiChinhSua();
-        }
-        private void btnKhongLuu_Click(object sender, EventArgs e)
-        {
-            blnThem = false;
-            GanDuLieu();
-            DieuKhienKhiBinhThuong();
-        }
+
+
 
         void ThucThiLuu()
         {
-            string strSQL, strMaNV, strHoLot, strTen, strGioiTinh = "Nam", strNgaySinh, strDiaChi, strLuong, strMatkhau = "", strGhiChu, strQuyenSD;
+            string strSQL,  strMatkhau = "", strQuyenSD;
+            bool  GioiTinh = true;
+            float Luong;
+
             if (blnThem)
                 strSQL = "Insert Into NhanVien Values(@MaNV,@HoLot,@Ten,@GioiTinh,@NgaySinh,@DiaChi,@Luong,@MatKhau,@GhiChu,@QuyenSD)";
             else
-                strSQL = "Update NhanVien Set ,HoLot=@HoLot,Ten=@Ten,GioiTinh=@GioiTinh,NgaySinh=@NgaySinh=,DiaChi@DiaChi,Luong=@Luong,MatKhau=@MatKhau,GhiChu=@GhiChu,QuyenSD=@QuyenSD Where MaNV=@MaNV";
+                strSQL = "Update NhanVien Set HoLot=@HoLot,Ten=@Ten,Phai=@GioiTinh,NgaySinh=@NgaySinh,DiaChi=@DiaChi,Luong=@Luong,GhiChu=@GhiChu,QuyenSD=@QuyenSD Where MaNV=@MaNV";
             if (MyPublics.conMyConnection.State == ConnectionState.Closed)
                 MyPublics.conMyConnection.Open();
             SqlCommand cmdCommand = new SqlCommand(strSQL, MyPublics.conMyConnection);
@@ -255,14 +235,21 @@ namespace QL_HangHoa
             cmdCommand.Parameters.AddWithValue("@HoLot", txtHoLot.Text);
             cmdCommand.Parameters.AddWithValue("@Ten", txtTen.Text);
             cmdCommand.Parameters.AddWithValue("@DiaChi", txtDiaChi.Text);
-            cmdCommand.Parameters.AddWithValue("@Luong", txtLuong.Text);
+            if (txtLuong.Text == "")
+            {
+                Luong = 0;
+            }
+            else
+            {
+                Luong=float.Parse(txtLuong.Text);
+            }
+            cmdCommand.Parameters.AddWithValue("@Luong", Luong);
             cmdCommand.Parameters.AddWithValue("@GhiChu", txtGhiChu.Text);
             if (rdoNu.Checked)
-                strGioiTinh = "Nữ";
-            cmdCommand.Parameters.AddWithValue("@GioiTinh", strGioiTinh);
+                GioiTinh = false;
+            cmdCommand.Parameters.AddWithValue("@GioiTinh", GioiTinh);
             cmdCommand.Parameters.AddWithValue("@NgaySinh", dtpNgaySinh.Value);
-            cmdCommand.Parameters.AddWithValue("@MaNV", cboNhanVien.SelectedValue.ToString());
-            cmdCommand.Parameters.AddWithValue("@NhanVien", strNhanVien);
+
             if (blnThem)
             {
                 strMatkhau = MyPublics.MaHoaPassWord(txtMaNV.Text);
@@ -270,50 +257,57 @@ namespace QL_HangHoa
 
             }
 
-            strQuyenSD = cboQuyenSD.SelectedValue.ToString();
-            cmdCommand.Parameters.AddWithValue("@QuyenSD", strQuyenSD);
+            if (cboQuyenSD.SelectedIndex == -1)
+                cmdCommand.Parameters.AddWithValue("@QuyenSD", DBNull.Value);
+            else
+                cmdCommand.Parameters.AddWithValue("@QuyenSD", cboQuyenSD.SelectedValue.ToString());
+            
             cmdCommand.ExecuteNonQuery();
             MyPublics.conMyConnection.Close();
             if (blnThem)
             {
-                dsNhanVien.Tables["NhanVien"].Rows.Add(txtMaNV.Text, txtHoLot.Text, txtTen.Text, strGioiTinh, dtpNgaySinh.Value, txtDiaChi.Text, txtLuong.Text, strMatkhau, strQuyenSD);
+                dsNhanVien.Tables["NhanVien"].Rows.Add(txtMaNV.Text, txtHoLot.Text, txtTen.Text, GioiTinh,  txtDiaChi.Text,dtpNgaySinh.Value, Luong ,txtGhiChu.Text,cboQuyenSD.Text, strMatkhau );
                 GanDuLieu();
                 blnThem = false;
             }
             else
             {
                 int curRow = dgvNV.CurrentRow.Index;
-                dsNhanVien.Tables["NhanVien"].Rows[curRow][1] = txtMaNV.Text;
-                dsNhanVien.Tables["NhanVien"].Rows[curRow][2] = txtHoLot.Text;
-                dsNhanVien.Tables["NhanVien"].Rows[curRow][3] = txtTen.Text;
-                dsNhanVien.Tables["NhanVien"].Rows[curRow][4] = strGioiTinh;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][1] = txtHoLot.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][2] = txtTen.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][3] = GioiTinh;
                 dsNhanVien.Tables["NhanVien"].Rows[curRow][5] = dtpNgaySinh.Value;
-                dsNhanVien.Tables["NhanVien"].Rows[curRow][6] = txtDiaChi.Text;
-                dsNhanVien.Tables["NhanVien"].Rows[curRow][7] = txtLuong.Text;
-                dsNhanVien.Tables["NhanVien"].Rows[curRow][8] = strMatkhau;
-                dsNhanVien.Tables["NhanVien"].Rows[curRow][9] = txtGhiChu.Text;
-                dsNhanVien.Tables["NhanVien"].Rows[curRow][10] = strQuyenSD;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][4] = txtDiaChi.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][6] = txtLuong.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][9] = strMatkhau;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][7] = txtGhiChu.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][8] =cboQuyenSD.Text;
             }
             DieuKhienKhiBinhThuong();
 
         }
 
-        private void btnLuu_Click(object sender, EventArgs e)
-        {
-            if ((txtMaNV.Text == "") || (txtHoLot.Text == "") || (cboNhanVien.SelectedIndex == -1))
-                MessageBox.Show("LỖI!");
-            else
-                if ((MyPublics.TonTaiKhoaChinh(txtMaNV.Text, "MaNV", "NhanVien")))
-            {
-                MessageBox.Show("Đã có!! ");
-                txtMaNV.Focus();
-            }
-            else
-                ThucThiLuu();
 
+
+
+
+        private void dgvNV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            GanDuLieu();
         }
 
-        private void btnXoaClick(object sender, EventArgs e)
+        private void btnThem_Click_1(object sender, EventArgs e)
+        {
+            blnThem = true;
+            DieuKhienKhiThemMoi();
+        }
+
+        private void btnSua_Click_1(object sender, EventArgs e)
+        {
+            DieuKhienKhiChinhSua();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult blnDongY;
             blnDongY = MessageBox.Show("Bạn muốn xóa ?", "Xác nhận", MessageBoxButtons.YesNo);
@@ -329,11 +323,49 @@ namespace QL_HangHoa
                 int curRow = dgvNV.CurrentRow.Index;
                 dsNhanVien.Tables["NhanVien"].Rows.RemoveAt(curRow);
                 GanDuLieu();
+            }
+        }
 
+        private void btnLuu_Click_1(object sender, EventArgs e)
+        {
+            if ((txtMaNV.Text == "") || (txtHoLot.Text == "") ||( txtLuong.Text!="" && !float.TryParse(txtLuong.Text, out float Luong )))
+                MessageBox.Show("Lỗi nhập dữ liệu !");
+                
+            else if (blnThem && (MyPublics.TonTaiKhoaChinh(txtMaNV.Text, "MaNV", "NhanVien")))
+            {
+                MessageBox.Show("Đã có!! ");
+                txtMaNV.Focus();
+            }
+            else
+                ThucThiLuu();
+        }
+
+        private void btnKhongLuu_Click_1(object sender, EventArgs e)
+        {
+            blnThem = false;
+            GanDuLieu();
+            DieuKhienKhiBinhThuong();
+        }
+
+        private void btnDong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dgvNV_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == 9)
+            {
+
+                if(e.Value != null)
+                {
+                    e.Value = new string('*', e.Value.ToString().Length);
+                }
             }
         }
     }
 }
 
-       
-        
+
+
+
