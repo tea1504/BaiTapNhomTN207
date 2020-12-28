@@ -14,8 +14,7 @@ namespace QL_HangHoa
 {
     public partial class frmNhanVien : Form
     {
-        DataSet dsNV = new DataSet();
-        DataSet dsNhanVien = new DataSet();
+               DataSet dsNhanVien = new DataSet();
         DataSet dsQuyenSD = new DataSet();
         bool blnThem = false;
         private string strNhanVien;
