@@ -30,7 +30,7 @@ namespace QL_HangHoa
 
         void GanDuLieu()
         {
-            if (dsNV.Tables["NhanVien"].Rows.Count > 0)
+            if (dsNhanVien.Tables["NhanVien"].Rows.Count > 0)
             {
                 txtMaNV.Text = dgvNV[0, dgvNV.CurrentRow.Index].Value.ToString();
                 txtHoLot.Text = dgvNV[1, dgvNV.CurrentRow.Index].Value.ToString();
@@ -167,10 +167,8 @@ namespace QL_HangHoa
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
             string strSelect = " Select * From Nhanvien";
-            MyPublics.OpenData(strSelect, dsNV, "NhanVien");
-            strSelect = "Select MaNV,HoLot,Ten,GioiTinh,DiaChi,Luong From NhanVien";
-
             MyPublics.OpenData(strSelect, dsNhanVien, "NhanVien");
+            
 
             cboNhanVien.DataSource = dsNhanVien.Tables["NhanVien"];
             cboNhanVien.DisplayMember = "MaNV";
@@ -191,7 +189,7 @@ namespace QL_HangHoa
             txtGhiChu.MaxLength = 20;
             txtMatKhau.MaxLength = 15;
 
-            dgvNV.DataSource = dsNV;
+            dgvNV.DataSource = dsNhanVien;
             dgvNV.DataMember = "NhanVien";
             dgvNV.Width = 690;
             dgvNV.AllowUserToAddRows = false;
@@ -278,23 +276,23 @@ namespace QL_HangHoa
             MyPublics.conMyConnection.Close();
             if (blnThem)
             {
-                dsNV.Tables["NhanVien"].Rows.Add(txtMaNV.Text, txtHoLot.Text, txtTen.Text, strGioiTinh, dtpNgaySinh.Value, txtDiaChi.Text, txtLuong.Text, strMatkhau, strQuyenSD);
+                dsNhanVien.Tables["NhanVien"].Rows.Add(txtMaNV.Text, txtHoLot.Text, txtTen.Text, strGioiTinh, dtpNgaySinh.Value, txtDiaChi.Text, txtLuong.Text, strMatkhau, strQuyenSD);
                 GanDuLieu();
                 blnThem = false;
             }
             else
             {
                 int curRow = dgvNV.CurrentRow.Index;
-                dsNV.Tables["NhanVien"].Rows[curRow][1] = txtMaNV.Text;
-                dsNV.Tables["NhanVien"].Rows[curRow][2] = txtHoLot.Text;
-                dsNV.Tables["NhanVien"].Rows[curRow][3] = txtTen.Text;
-                dsNV.Tables["NhanVien"].Rows[curRow][4] = strGioiTinh;
-                dsNV.Tables["NhanVien"].Rows[curRow][5] = dtpNgaySinh.Value;
-                dsNV.Tables["NhanVien"].Rows[curRow][6] = txtDiaChi.Text;
-                dsNV.Tables["NhanVien"].Rows[curRow][7] = txtLuong.Text;
-                dsNV.Tables["NhanVien"].Rows[curRow][8] = strMatkhau;
-                dsNV.Tables["NhanVien"].Rows[curRow][9] = txtGhiChu.Text;
-                dsNV.Tables["NhanVien"].Rows[curRow][10] = strQuyenSD;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][1] = txtMaNV.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][2] = txtHoLot.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][3] = txtTen.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][4] = strGioiTinh;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][5] = dtpNgaySinh.Value;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][6] = txtDiaChi.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][7] = txtLuong.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][8] = strMatkhau;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][9] = txtGhiChu.Text;
+                dsNhanVien.Tables["NhanVien"].Rows[curRow][10] = strQuyenSD;
             }
             DieuKhienKhiBinhThuong();
 
@@ -329,7 +327,7 @@ namespace QL_HangHoa
                 cmdCommand.ExecuteNonQuery();
                 MyPublics.conMyConnection.Close();
                 int curRow = dgvNV.CurrentRow.Index;
-                dsNV.Tables["NhanVien"].Rows.RemoveAt(curRow);
+                dsNhanVien.Tables["NhanVien"].Rows.RemoveAt(curRow);
                 GanDuLieu();
 
             }
