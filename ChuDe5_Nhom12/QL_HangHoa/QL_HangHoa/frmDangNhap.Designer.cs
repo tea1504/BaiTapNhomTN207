@@ -46,12 +46,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(44, 282);
+            this.label2.Location = new System.Drawing.Point(33, 278);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.Size = new System.Drawing.Size(113, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tài khoản:";
             // 
@@ -59,31 +59,33 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.White;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(44, 362);
+            this.label3.Location = new System.Drawing.Point(33, 360);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 20);
+            this.label3.Size = new System.Drawing.Size(107, 25);
             this.label3.TabIndex = 2;
             this.label3.Text = "Mật khẩu:";
             // 
             // txtTK
             // 
             this.txtTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTK.Location = new System.Drawing.Point(154, 279);
+            this.txtTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTK.Location = new System.Drawing.Point(154, 278);
             this.txtTK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTK.Name = "txtTK";
-            this.txtTK.Size = new System.Drawing.Size(259, 19);
+            this.txtTK.Size = new System.Drawing.Size(259, 24);
             this.txtTK.TabIndex = 1;
             // 
             // txtMK
             // 
             this.txtMK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMK.Location = new System.Drawing.Point(154, 359);
+            this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMK.Location = new System.Drawing.Point(154, 360);
             this.txtMK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(259, 19);
+            this.txtMK.Size = new System.Drawing.Size(259, 24);
             this.txtMK.TabIndex = 2;
             // 
             // btnDN
@@ -138,7 +140,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(154, 304);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(259, 1);
@@ -146,7 +149,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel2.Location = new System.Drawing.Point(154, 384);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(259, 1);
