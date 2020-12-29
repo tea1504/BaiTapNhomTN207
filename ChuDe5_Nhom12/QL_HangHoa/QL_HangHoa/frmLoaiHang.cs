@@ -196,7 +196,13 @@ namespace QL_HangHoa
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if ((txtMa.Text == "") || (txtTen.Text == "")) MessageBox.Show("Lỗi nhập dữ liệu!","Lỗi");
+            if (txtMa.Text == "")
+            {
+            }
+            else if (txtTen.Text == "")
+            {
+                MessageBox.Show("Lỗi nhập dữ liệu!", "Lỗi");
+            }
             else
             {
                 if (blnThem)

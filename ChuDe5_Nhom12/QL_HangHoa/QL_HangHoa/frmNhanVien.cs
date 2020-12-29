@@ -207,6 +207,7 @@ namespace QL_HangHoa
             dgvNV.Columns[5].Width = 100;
             dgvNV.Columns[5].HeaderText = "Ngày sinh";
             dgvNV.Columns[4].Width = 185;
+            dgvNV.Columns[5].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvNV.Columns[4].HeaderText = "Địa chỉ";
             dgvNV.Columns[6].Width = 104;
             dgvNV.Columns[6].HeaderText = "Lương";
@@ -315,7 +316,7 @@ namespace QL_HangHoa
             else
             {
                 DialogResult blnDongY;
-                blnDongY = MessageBox.Show("Bạn muốn xóa nhân viên (" + txtMaNV + ") ?", "Xác nhận", MessageBoxButtons.YesNo);
+                blnDongY = MessageBox.Show("Bạn muốn xóa nhân viên (" + txtMaNV.Text + ") ?", "Xác nhận", MessageBoxButtons.YesNo);
                 if (blnDongY == DialogResult.Yes)
                 {
                     string strDelete = "Delete NhanVien Where MaNV=@MaNV";
@@ -342,13 +343,13 @@ namespace QL_HangHoa
             }
             else if (txtHoLot.Text == "")
             {
-                MessageBox.Show("Bạn chưa họ nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn chưa nhập họ nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtHoLot.Focus();
                 return;
             }
             else if (txtTen.Text == "")
             {
-                MessageBox.Show("Bạn chưa tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bạn chưa nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtTen.Focus();
                 return;
             }
@@ -359,6 +360,12 @@ namespace QL_HangHoa
                 txtLuong.Focus();
                 return;
 
+            }
+            else if(txtMatKhau.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập mật khẩu nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtMatKhau.Focus();
+                return;
             }
             else if (blnThem && (MyPublics.TonTaiKhoaChinh(txtMaNV.Text, "MaNV", "NhanVien")))
             {

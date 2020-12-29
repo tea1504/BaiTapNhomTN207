@@ -14,6 +14,7 @@ namespace QL_HangHoa
     public partial class frmDangNhap: Form
     {
         private frmMain fMain;
+        int count = 0;
         public frmDangNhap()
         {
             InitializeComponent();
@@ -58,7 +59,7 @@ namespace QL_HangHoa
                         fMain.mnuDangNhap.Enabled = true;
                         fMain.mnuThoatDangNhap.Enabled = true;
                         fMain.mnuDoiMatKhau.Enabled = true;
-                        MessageBox.Show("Đăng nhập thành công", "Thông báo");
+                        MessageBox.Show("Đăng nhập thành công.\nXin chào bạn " + MyPublics.strTen, "Thông báo");
                         MyPublics.conMyConnection.Close();
                         this.Close();
                     }
@@ -66,6 +67,17 @@ namespace QL_HangHoa
                     {
                         MessageBox.Show("Mã nhân viên hoặc mật khẩu sai!", "Thông báo");
                         txtTK.Focus();
+                        count++;
+                        if(count >= 3)
+                        {
+                            MessageBox.Show("Bạn đã nhập sai 3 lần!", "Thông báo");
+                            MyPublics.strMaNV = "";
+                            fMain.mnuDuLieu.Enabled = false;
+                            fMain.mnuTienIch.Enabled = true;
+                            fMain.mnuThoatDangNhap.Enabled = false;
+                            fMain.mnuDoiMatKhau.Enabled = false;
+                            Close();
+                        }
                     }
                 }
                 else
@@ -81,6 +93,7 @@ namespace QL_HangHoa
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            MyPublics.strMaNV = "";
             fMain.mnuDuLieu.Enabled = false;
             fMain.mnuTienIch.Enabled = true;
             fMain.mnuThoatDangNhap.Enabled = false;

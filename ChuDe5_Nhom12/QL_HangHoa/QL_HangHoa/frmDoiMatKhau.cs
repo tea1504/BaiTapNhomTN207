@@ -36,7 +36,7 @@ namespace QL_HangHoa
         {
             if(txtMatKhauMoi.Text != txtXacNhan.Text)
             {
-                MessageBox.Show("Xác nhận không chính xác!");
+                MessageBox.Show("Xác nhận không chính xác!","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
@@ -49,6 +49,7 @@ namespace QL_HangHoa
                 cmdCommand.Parameters.AddWithValue("@MaNV", MyPublics.strMaNV);
                 cmdCommand.ExecuteNonQuery();
                 MyPublics.conMyConnection.Close();
+                MessageBox.Show("Đã đổi mật khẩu thành công", "Thông báo");
                 this.Close();
             }
         }

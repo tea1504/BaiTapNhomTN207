@@ -370,9 +370,9 @@ namespace QL_HangHoa
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(32, 52);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(57, 20);
+            this.label12.Size = new System.Drawing.Size(120, 20);
             this.label12.TabIndex = 34;
-            this.label12.Text = "MãNV";
+            this.label12.Text = "Mã nhân viên:";
             // 
             // txtMaNV
             // 

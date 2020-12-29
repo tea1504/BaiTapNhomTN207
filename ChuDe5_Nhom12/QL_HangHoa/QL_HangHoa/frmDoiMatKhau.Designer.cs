@@ -66,9 +66,9 @@ namespace QL_HangHoa
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label2.Location = new System.Drawing.Point(22, 301);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 25);
+            this.label2.Size = new System.Drawing.Size(115, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Tài khoản:";
+            this.label2.Text = "Nhân viên:";
             // 
             // label3
             // 

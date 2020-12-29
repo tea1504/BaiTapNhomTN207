@@ -42,7 +42,8 @@ namespace QL_HangHoa
 
         private void mnuGioiThieu_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bài tập môn Lập trình .NET\n\nĐề tài 5: Chương trình quản lý hàng hóa\n\nNhóm thực hiện nhóm 12\n1. Trần Văn Hòa\n2. Trần Phong Bão\n3. Đoàn Huỳnh Giao", "Giới thiệu");
+            frmGioiThieu fGT = new frmGioiThieu();
+            fGT.ShowDialog();
         }
 
         private void mnuLoaiHang_Click(object sender, EventArgs e)

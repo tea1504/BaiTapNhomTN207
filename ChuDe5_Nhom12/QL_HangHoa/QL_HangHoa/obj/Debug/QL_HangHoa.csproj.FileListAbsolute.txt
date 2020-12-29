@@ -62,3 +62,4 @@ C:\Users\HP\source\repos\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj
 C:\Users\HP\source\repos\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.exe
 C:\Users\HP\source\repos\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.pdb
 C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmDoiMatKhau.resources
+C:\Users\DELL\source\repos\tea1504\BaiTapNhomTN207\ChuDe5_Nhom12\QL_HangHoa\QL_HangHoa\obj\Debug\QL_HangHoa.frmGioiThieu.resources
