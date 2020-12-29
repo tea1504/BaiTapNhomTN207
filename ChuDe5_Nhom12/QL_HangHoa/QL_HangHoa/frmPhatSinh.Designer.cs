@@ -78,15 +78,16 @@ namespace QL_HangHoa
             // lblSoThuTu
             // 
             this.lblSoThuTu.AutoSize = true;
+            this.lblSoThuTu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoThuTu.Location = new System.Drawing.Point(61, 42);
             this.lblSoThuTu.Name = "lblSoThuTu";
-            this.lblSoThuTu.Size = new System.Drawing.Size(78, 20);
+            this.lblSoThuTu.Size = new System.Drawing.Size(88, 20);
             this.lblSoThuTu.TabIndex = 1;
             this.lblSoThuTu.Text = "Số thứ tự:";
             // 
             // txtSoThuTu
             // 
-            this.txtSoThuTu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtSoThuTu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSoThuTu.Location = new System.Drawing.Point(474, 174);
             this.txtSoThuTu.Name = "txtSoThuTu";
@@ -96,24 +97,26 @@ namespace QL_HangHoa
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(61, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 20);
+            this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 3;
             this.label3.Text = "Ngày:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(61, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 20);
+            this.label4.Size = new System.Drawing.Size(48, 20);
             this.label4.TabIndex = 5;
             this.label4.Text = "Loại:";
             // 
             // txtPhieu
             // 
-            this.txtPhieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtPhieu.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhieu.Location = new System.Drawing.Point(474, 269);
             this.txtPhieu.Name = "txtPhieu";
@@ -123,15 +126,16 @@ namespace QL_HangHoa
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(61, 137);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 20);
+            this.label5.Size = new System.Drawing.Size(59, 20);
             this.label5.TabIndex = 7;
             this.label5.Text = "Phiếu:";
             // 
             // txtKhachHang
             // 
-            this.txtKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtKhachHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtKhachHang.Location = new System.Drawing.Point(474, 300);
             this.txtKhachHang.Name = "txtKhachHang";
@@ -141,15 +145,16 @@ namespace QL_HangHoa
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(61, 168);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 20);
+            this.label6.Size = new System.Drawing.Size(109, 20);
             this.label6.TabIndex = 9;
             this.label6.Text = "Khách hàng:";
             // 
             // txtLyDo
             // 
-            this.txtLyDo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtLyDo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLyDo.Location = new System.Drawing.Point(474, 331);
             this.txtLyDo.Name = "txtLyDo";
@@ -159,24 +164,26 @@ namespace QL_HangHoa
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(61, 199);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 20);
+            this.label7.Size = new System.Drawing.Size(57, 20);
             this.label7.TabIndex = 11;
             this.label7.Text = "Lý do:";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(61, 230);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 20);
+            this.label8.Size = new System.Drawing.Size(89, 20);
             this.label8.TabIndex = 13;
             this.label8.Text = "Tên hàng:";
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtSoLuong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSoLuong.Location = new System.Drawing.Point(474, 395);
             this.txtSoLuong.Name = "txtSoLuong";
@@ -186,15 +193,16 @@ namespace QL_HangHoa
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(61, 263);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 20);
+            this.label9.Size = new System.Drawing.Size(85, 20);
             this.label9.TabIndex = 15;
             this.label9.Text = "Số lượng:";
             // 
             // txtDonGia
             // 
-            this.txtDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtDonGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDonGia.Location = new System.Drawing.Point(474, 426);
             this.txtDonGia.Name = "txtDonGia";
@@ -204,24 +212,26 @@ namespace QL_HangHoa
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(61, 294);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 20);
+            this.label10.Size = new System.Drawing.Size(76, 20);
             this.label10.TabIndex = 17;
             this.label10.Text = "Đơn giá:";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(61, 325);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 20);
+            this.label11.Size = new System.Drawing.Size(93, 20);
             this.label11.TabIndex = 19;
             this.label11.Text = "Nhân viên:";
             // 
             // dtpNgay
             // 
-            this.dtpNgay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.dtpNgay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpNgay.CustomFormat = "dd/MM/yyyy";
             this.dtpNgay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -232,7 +242,7 @@ namespace QL_HangHoa
             // 
             // cboLoai
             // 
-            this.cboLoai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.cboLoai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboLoai.FormattingEnabled = true;
             this.cboLoai.Location = new System.Drawing.Point(474, 236);
@@ -242,7 +252,7 @@ namespace QL_HangHoa
             // 
             // cboTenHang
             // 
-            this.cboTenHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.cboTenHang.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboTenHang.FormattingEnabled = true;
             this.cboTenHang.Location = new System.Drawing.Point(474, 362);
@@ -252,7 +262,7 @@ namespace QL_HangHoa
             // 
             // cboNhanVien
             // 
-            this.cboNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.cboNhanVien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cboNhanVien.FormattingEnabled = true;
             this.cboNhanVien.Location = new System.Drawing.Point(474, 457);
@@ -262,15 +272,15 @@ namespace QL_HangHoa
             // 
             // dgvPhatSinh
             // 
-            this.dgvPhatSinh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.dgvPhatSinh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPhatSinh.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgvPhatSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhatSinh.Location = new System.Drawing.Point(27, 539);
             this.dgvPhatSinh.Name = "dgvPhatSinh";
             this.dgvPhatSinh.RowTemplate.Height = 30;
-            this.dgvPhatSinh.Size = new System.Drawing.Size(1420, 295);
+            this.dgvPhatSinh.Size = new System.Drawing.Size(1420, 311);
             this.dgvPhatSinh.TabIndex = 25;
             this.dgvPhatSinh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhatSinh_CellClick);
             // 
@@ -360,7 +370,7 @@ namespace QL_HangHoa
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.lblSoThuTu);
             this.groupBox1.Controls.Add(this.label3);
@@ -395,7 +405,7 @@ namespace QL_HangHoa
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1474, 846);
+            this.ClientSize = new System.Drawing.Size(1474, 894);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.btnKhongLuu);

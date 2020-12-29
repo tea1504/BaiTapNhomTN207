@@ -13,8 +13,6 @@ namespace QL_HangHoa
 {
     public partial class frmDoiMatKhau : Form
     {
-        DataSet dsDoiMatKhau = new DataSet();
-
         public frmDoiMatKhau()
         {
             InitializeComponent();
@@ -22,11 +20,11 @@ namespace QL_HangHoa
 
         private void frmDoiMatKhau_Load(object sender, EventArgs e)
         {
-            txtNhanVien.Text = MyPublics.strMaNV;
-            txtNhanVien.MaxLength = 5;
+            txtNhanVien.Text = MyPublics.strMaNV + " - " + MyPublics.strTen;
+            txtNhanVien.ReadOnly = true;
+            txtNhanVien.BackColor = Color.White;
             txtMatKhauMoi.PasswordChar = '*';
             txtXacNhan.PasswordChar = '*';
-
         }
 
         private void btnDong_Click(object sender, EventArgs e)
@@ -41,8 +39,7 @@ namespace QL_HangHoa
                 MessageBox.Show("Xác nhận không chính xác!");
                 return;
             }
-
-            if (txtMatKhauMoi.Text == txtXacNhan.Text)
+            else
             {
                 string strUpdate = "Update NhanVien Set MatKhau=@MatKhau Where MaNV=@MaNV";
                 if (MyPublics.conMyConnection.State == ConnectionState.Closed)
@@ -53,7 +50,6 @@ namespace QL_HangHoa
                 cmdCommand.ExecuteNonQuery();
                 MyPublics.conMyConnection.Close();
                 this.Close();
-
             }
         }
     }

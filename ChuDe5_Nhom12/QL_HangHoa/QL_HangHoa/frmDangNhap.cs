@@ -41,7 +41,7 @@ namespace QL_HangHoa
                     MyPublics.strMaNV = txtTK.Text;
                     strpwd = MyPublics.MaHoaPassWord(txtMK.Text);
                     // strpwd = txtMK.Text;
-                    sqlselect = "Select MaNV, QuyenSD from NhanVien Where MaNV = @MaNV and MatKhau = @MatKhau";
+                    sqlselect = "Select MaNV, QuyenSD, HoLot + ' ' + Ten AS HoTen from NhanVien Where MaNV = @MaNV and MatKhau = @MatKhau";
                     cmd = new SqlCommand(sqlselect, MyPublics.conMyConnection);
                     cmd.Parameters.AddWithValue("@MaNV", MyPublics.strMaNV);
                     cmd.Parameters.AddWithValue("MatKhau", strpwd);
@@ -51,6 +51,7 @@ namespace QL_HangHoa
                         dr.Read();
                         MyPublics.strMaNV = dr.GetString(0);
                         MyPublics.strQuyenSD = dr.GetString(1);
+                        MyPublics.strTen = dr.GetString(2);
                         dr.Close();
                         fMain.mnuDuLieu.Enabled = true;
                         fMain.mnuTienIch.Enabled = true;

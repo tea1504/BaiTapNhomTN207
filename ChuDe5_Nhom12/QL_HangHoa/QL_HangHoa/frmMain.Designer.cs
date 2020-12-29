@@ -46,6 +46,7 @@
             // 
             // mnuQLBanHang
             // 
+            this.mnuQLBanHang.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mnuQLBanHang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuQLBanHang.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.mnuQLBanHang.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -121,6 +122,7 @@
             this.mnuThoatDangNhap.Name = "mnuThoatDangNhap";
             this.mnuThoatDangNhap.Size = new System.Drawing.Size(202, 26);
             this.mnuThoatDangNhap.Text = "Thoát Đăng Nhập";
+            this.mnuThoatDangNhap.Click += new System.EventHandler(this.mnuThoatDangNhap_Click);
             // 
             // mnuDoiMatKhau
             // 

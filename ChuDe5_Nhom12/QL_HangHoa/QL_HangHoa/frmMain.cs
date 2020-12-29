@@ -48,13 +48,20 @@ namespace QL_HangHoa
         private void mnuLoaiHang_Click(object sender, EventArgs e)
         {
             frmLoaiHang frmLH = new frmLoaiHang();
-            frmLH.ShowDialog();
+            frmLH.Show();
         }
 
         private void mnuDangNhap_Click(object sender, EventArgs e)
         {
-            frmDangNhap frmDN = new frmDangNhap(this);
-            frmDN.ShowDialog();
+            if (MyPublics.strMaNV != "")
+            {
+                MessageBox.Show("Bạn đã đăng nhập rồi");
+            }
+            else
+            {
+                frmDangNhap frmDN = new frmDangNhap(this);
+                frmDN.ShowDialog();
+            }
         }
 
         private void mnuNhanVien_Click(object sender, EventArgs e)
@@ -66,7 +73,23 @@ namespace QL_HangHoa
         private void mnuDoiMatKhau_Click(object sender, EventArgs e)
         {
             frmDoiMatKhau frmDMK = new frmDoiMatKhau();
-            frmDMK.Show();
+            frmDMK.ShowDialog();
+        }
+
+        private void mnuThoatDangNhap_Click(object sender, EventArgs e)
+        {
+            DialogResult blnDongY;
+            blnDongY = MessageBox.Show("Bạn muốn thoát đăng nhập?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(blnDongY == DialogResult.Yes)
+            {
+                this.mnuDuLieu.Enabled = false;
+                this.mnuTienIch.Enabled = true;
+                this.mnuThoatDangNhap.Enabled = false;
+                this.mnuDoiMatKhau.Enabled = false;
+                MyPublics.strMaNV = "";
+                MyPublics.strQuyenSD = "";
+                MyPublics.strTen = "";
+            }
         }
     }
 }

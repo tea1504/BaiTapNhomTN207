@@ -33,19 +33,15 @@ namespace QL_HangHoa
                 txtMaNV.Text = dgvNV[0, dgvNV.CurrentRow.Index].Value.ToString();
                 txtHoLot.Text = dgvNV[1, dgvNV.CurrentRow.Index].Value.ToString();
                 txtTen.Text = dgvNV[2, dgvNV.CurrentRow.Index].Value.ToString();
-                if (dgvNV[3, dgvNV.CurrentRow.Index].Value.ToString() == "true")
+                if ((bool)dgvNV[3, dgvNV.CurrentRow.Index].Value)
                     rdoNam.Checked = true;
                 else
                     rdoNu.Checked = true;
                 dtpNgaySinh.Value = DateTime.Parse(dgvNV[5, dgvNV.CurrentRow.Index].Value.ToString());
                 txtDiaChi.Text = dgvNV[4, dgvNV.CurrentRow.Index].Value.ToString();
                 txtLuong.Text = dgvNV[6, dgvNV.CurrentRow.Index].Value.ToString();
-
-
                 txtMatKhau.Text = dgvNV[9, dgvNV.CurrentRow.Index].Value.ToString();
                 txtGhiChu.Text = dgvNV[7, dgvNV.CurrentRow.Index].Value.ToString();
-
-
                 cboQuyenSD.SelectedValue = dgvNV[8, dgvNV.CurrentRow.Index].Value.ToString();
 
             }
@@ -58,11 +54,8 @@ namespace QL_HangHoa
                 dtpNgaySinh.Value = DateTime.Today;
                 txtDiaChi.Clear();
                 txtLuong.Clear();
-
                 txtMatKhau.Clear();
                 txtGhiChu.Clear();
-
-
                 cboQuyenSD.SelectedIndex = -1;
 
             }
@@ -75,20 +68,27 @@ namespace QL_HangHoa
             if (MyPublics.strQuyenSD == "Quản lý")
             {
                 btnThem.Enabled = true;
+                btnThem.BackColor = Color.FromArgb(116, 185, 255);
                 btnSua.Enabled = true;
+                btnSua.BackColor = Color.FromArgb(116, 185, 255);
                 btnXoa.Enabled = true;
+                btnXoa.BackColor = Color.FromArgb(116, 185, 255);
             }
-
             else
             {
                 btnThem.Enabled = false;
+                btnThem.BackColor = Color.FromArgb(223, 230, 233);
                 btnSua.Enabled = false;
+                btnSua.BackColor = Color.FromArgb(223, 230, 233);
                 btnXoa.Enabled = false;
-
+                btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             }
             btnLuu.Enabled = false;
+            btnLuu.BackColor = Color.FromArgb(223, 230, 233);
             btnKhongLuu.Enabled = false;
+            btnKhongLuu.BackColor = Color.FromArgb(223, 230, 233);
             btnDong.Enabled = true;
+            btnDong.BackColor = Color.FromArgb(116, 185, 255);
             txtMaNV.ReadOnly = true;
             txtMaNV.BackColor = Color.White;
             txtHoLot.ReadOnly = true;
@@ -106,18 +106,23 @@ namespace QL_HangHoa
             txtGhiChu.BackColor = Color.White;
             txtMatKhau.ReadOnly = true;
             txtMatKhau.BackColor = Color.White;
-
             dgvNV.Enabled = true;
-
+            txtMatKhau.PasswordChar = '*';
         }
         void DieuKhienKhiThemMoi()
         {
             btnThem.Enabled = false;
+            btnThem.BackColor = Color.FromArgb(223, 230, 233);
             btnSua.Enabled = false;
+            btnSua.BackColor = Color.FromArgb(223, 230, 233);
             btnXoa.Enabled = false;
+            btnXoa.BackColor = Color.FromArgb(223, 230, 233);
             btnLuu.Enabled = true;
+            btnLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnKhongLuu.Enabled = true;
+            btnKhongLuu.BackColor = Color.FromArgb(116, 185, 255);
             btnDong.Enabled = false;
+            btnDong.BackColor = Color.FromArgb(223, 230, 233);
             txtMaNV.ReadOnly = false;
             txtHoLot.ReadOnly = false;
             txtTen.ReadOnly = false;
@@ -139,35 +144,37 @@ namespace QL_HangHoa
             rdoNam.Checked = true;
             dtpNgaySinh.Value = DateTime.Today;
             cboQuyenSD.SelectedIndex = -1;
+            txtMaNV.Focus();
+            txtMatKhau.PasswordChar = '\0';
         }
         void DieuKhienKhiChinhSua()
         {
-            btnDong.Enabled = false;
-            btnKhongLuu.Enabled = true;
-            btnLuu.Enabled = true;
-            btnSua.Enabled = false;
             btnThem.Enabled = false;
+            btnThem.BackColor = Color.FromArgb(223, 230, 233);
+            btnSua.Enabled = false;
+            btnSua.BackColor = Color.FromArgb(223, 230, 233);
             btnXoa.Enabled = false;
-            txtMaNV.ReadOnly = false;
+            btnXoa.BackColor = Color.FromArgb(223, 230, 233);
+            btnLuu.Enabled = true;
+            btnLuu.BackColor = Color.FromArgb(116, 185, 255);
+            btnKhongLuu.Enabled = true;
+            btnKhongLuu.BackColor = Color.FromArgb(116, 185, 255);
+            btnDong.Enabled = false;
+            btnDong.BackColor = Color.FromArgb(223, 230, 233);
             txtHoLot.ReadOnly = false;
             txtTen.ReadOnly = false;
             txtDiaChi.ReadOnly = false;
             txtLuong.ReadOnly = false;
             txtGhiChu.ReadOnly = false;
-            txtMatKhau.ReadOnly = false;
             dtpNgaySinh.Enabled = true;
             dgvNV.Enabled = false;
-
+            txtHoLot.Focus();
         }
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
             string strSelect = " Select * From Nhanvien";
             MyPublics.OpenData(strSelect, dsNhanVien, "NhanVien");
-
-
-
-
 
             dsQuyenSD.Tables.Add("DSQuyenSD");
             dsQuyenSD.Tables["DSQuyenSD"].Columns.Add("QuyenSD");
@@ -176,51 +183,47 @@ namespace QL_HangHoa
             cboQuyenSD.DataSource = dsQuyenSD.Tables["DSQuyenSD"];
             cboQuyenSD.DisplayMember = "QuyenSD";
             cboQuyenSD.ValueMember = "QuyenSD";
+            txtMaNV.MaxLength = 5;
             txtHoLot.MaxLength = 20;
             txtTen.MaxLength = 10;
             txtDiaChi.MaxLength = 20;
             txtLuong.MaxLength = 20;
             txtGhiChu.MaxLength = 20;
             txtMatKhau.MaxLength = 15;
-
+            txtMatKhau.PasswordChar = '*';
             dgvNV.DataSource = dsNhanVien;
             dgvNV.DataMember = "NhanVien";
-            dgvNV.Width = 690;
+            dgvNV.Width = 1049;
             dgvNV.AllowUserToAddRows = false;
             dgvNV.AllowUserToDeleteRows = false;
-            dgvNV.Columns[0].Width = 20;
+            dgvNV.Columns[0].Width = 80;
             dgvNV.Columns[0].HeaderText = "Mã NV";
-            dgvNV.Columns[1].Width = 80;
+            dgvNV.Columns[1].Width = 150;
             dgvNV.Columns[1].HeaderText = "Họ Lót";
-            dgvNV.Columns[2].Width = 40;
+            dgvNV.Columns[2].Width = 80;
             dgvNV.Columns[2].HeaderText = "Tên";
-            dgvNV.Columns[3].Width = 40;
+            dgvNV.Columns[3].Width = 50;
             dgvNV.Columns[3].HeaderText = "Giới tính";
-            dgvNV.Columns[5].Width = 40;
+            dgvNV.Columns[5].Width = 100;
             dgvNV.Columns[5].HeaderText = "Ngày sinh";
-            dgvNV.Columns[4].Width = 80;
+            dgvNV.Columns[4].Width = 185;
             dgvNV.Columns[4].HeaderText = "Địa chỉ";
-            dgvNV.Columns[6].Width = 40;
+            dgvNV.Columns[6].Width = 104;
             dgvNV.Columns[6].HeaderText = "Lương";
-            dgvNV.Columns[9].Width = 40;
-            dgvNV.Columns[9].HeaderText = "Mật khẩu";
             dgvNV.Columns[7].Width = 80;
             dgvNV.Columns[7].HeaderText = "Ghi chú";
-            dgvNV.Columns[8].Width = 40;
+            dgvNV.Columns[8].Width = 100;
             dgvNV.Columns[8].HeaderText = " Quyền SD";
+            dgvNV.Columns[9].Width = 50;
+            dgvNV.Columns[9].HeaderText = "Mật khẩu";
             dgvNV.EditMode = DataGridViewEditMode.EditProgrammatically;
             GanDuLieu();
             DieuKhienKhiBinhThuong();
         }
 
-
-
-
-
-
         void ThucThiLuu()
         {
-            string strSQL,  strMatkhau = "", strQuyenSD;
+            string strSQL,  strMatkhau = "";
             bool  GioiTinh = true;
             float Luong;
 
@@ -287,10 +290,6 @@ namespace QL_HangHoa
 
         }
 
-
-
-
-
         private void dgvNV_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             GanDuLieu();
@@ -309,31 +308,61 @@ namespace QL_HangHoa
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            DialogResult blnDongY;
-            blnDongY = MessageBox.Show("Bạn muốn xóa ?", "Xác nhận", MessageBoxButtons.YesNo);
-            if (blnDongY == DialogResult.Yes)
+            if (MyPublics.TonTaiKhoaChinh(txtMaNV.Text, "MaNV", "PhatSinh"))
             {
-                string strDelete = "Delete NhanVien Where MaNV=@MaNV";
-                if (MyPublics.conMyConnection.State == ConnectionState.Closed)
-                    MyPublics.conMyConnection.Open();
-                SqlCommand cmdCommand = new SqlCommand(strDelete, MyPublics.conMyConnection);
-                cmdCommand.Parameters.AddWithValue("MaNV", txtMaNV.Text);
-                cmdCommand.ExecuteNonQuery();
-                MyPublics.conMyConnection.Close();
-                int curRow = dgvNV.CurrentRow.Index;
-                dsNhanVien.Tables["NhanVien"].Rows.RemoveAt(curRow);
-                GanDuLieu();
+                MessageBox.Show("Bạn phải xóa dữ liệu của nhân viên (" + txtMaNV.Text + ") ở bảng phát sinh trước", "Thông báo");
+            }
+            else
+            {
+                DialogResult blnDongY;
+                blnDongY = MessageBox.Show("Bạn muốn xóa nhân viên (" + txtMaNV + ") ?", "Xác nhận", MessageBoxButtons.YesNo);
+                if (blnDongY == DialogResult.Yes)
+                {
+                    string strDelete = "Delete NhanVien Where MaNV=@MaNV";
+                    if (MyPublics.conMyConnection.State == ConnectionState.Closed)
+                        MyPublics.conMyConnection.Open();
+                    SqlCommand cmdCommand = new SqlCommand(strDelete, MyPublics.conMyConnection);
+                    cmdCommand.Parameters.AddWithValue("MaNV", txtMaNV.Text);
+                    cmdCommand.ExecuteNonQuery();
+                    MyPublics.conMyConnection.Close();
+                    int curRow = dgvNV.CurrentRow.Index;
+                    dsNhanVien.Tables["NhanVien"].Rows.RemoveAt(curRow);
+                    GanDuLieu();
+                }
             }
         }
 
         private void btnLuu_Click_1(object sender, EventArgs e)
         {
-            if ((txtMaNV.Text == "") || (txtHoLot.Text == "") ||( txtLuong.Text!="" && !float.TryParse(txtLuong.Text, out float Luong )))
-                MessageBox.Show("Lỗi nhập dữ liệu !");
-                
+            if (txtMaNV.Text == "")
+            {
+                MessageBox.Show("Bạn chưa nhập mã nhân viên","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                txtMaNV.Focus();
+                return;
+            }
+            else if (txtHoLot.Text == "")
+            {
+                MessageBox.Show("Bạn chưa họ nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtHoLot.Focus();
+                return;
+            }
+            else if (txtTen.Text == "")
+            {
+                MessageBox.Show("Bạn chưa tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtTen.Focus();
+                return;
+            }
+            else if (txtLuong.Text != "" && !float.TryParse(txtLuong.Text, out float Luong))
+            {
+                MessageBox.Show("Bạn chưa nhập sai định dạng số", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtLuong.Clear();
+                txtLuong.Focus();
+                return;
+
+            }
             else if (blnThem && (MyPublics.TonTaiKhoaChinh(txtMaNV.Text, "MaNV", "NhanVien")))
             {
-                MessageBox.Show("Đã có!! ");
+                MessageBox.Show("Nhân viên " + txtMaNV.Text + " đã tông tại");
                 txtMaNV.Focus();
             }
             else
