@@ -369,7 +369,7 @@ namespace QL_HangHoa
             }
             else if (blnThem && (MyPublics.TonTaiKhoaChinh(txtMaNV.Text, "MaNV", "NhanVien")))
             {
-                MessageBox.Show("Nhân viên " + txtMaNV.Text + " đã tông tại");
+                MessageBox.Show("Nhân viên " + txtMaNV.Text + " đã tồn tại");
                 txtMaNV.Focus();
             }
             else

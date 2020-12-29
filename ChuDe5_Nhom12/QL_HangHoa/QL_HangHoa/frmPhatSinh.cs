@@ -269,6 +269,7 @@ namespace QL_HangHoa
                 strResult = drReader[0].ToString();
                 drReader.Close();
             }
+            else return "0";
             return strResult;
         }
 

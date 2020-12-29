@@ -198,10 +198,11 @@ namespace QL_HangHoa
         {
             if (txtMa.Text == "")
             {
+                MessageBox.Show("Bạn chưa nhập mã loại hàng", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else if (txtTen.Text == "")
             {
-                MessageBox.Show("Lỗi nhập dữ liệu!", "Lỗi");
+                MessageBox.Show("Bạn chưa nhập tên loại hàng", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
             else
             {
