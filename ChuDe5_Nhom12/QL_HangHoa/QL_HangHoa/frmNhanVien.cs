@@ -229,7 +229,7 @@ namespace QL_HangHoa
             float Luong;
 
             if (blnThem)
-                strSQL = "Insert Into NhanVien Values(@MaNV,@HoLot,@Ten,@GioiTinh,@NgaySinh,@DiaChi,@Luong,@MatKhau,@GhiChu,@QuyenSD)";
+                strSQL = "Insert Into NhanVien(MaNV,HoLot,Ten,Phai,NgaySinh,DiaChi,Luong,MatKhau,GhiChu,QuyenSD) Values(@MaNV,@HoLot,@Ten,@GioiTinh,@NgaySinh,@DiaChi,@Luong,@MatKhau,@GhiChu,@QuyenSD)";
             else
                 strSQL = "Update NhanVien Set HoLot=@HoLot,Ten=@Ten,Phai=@GioiTinh,NgaySinh=@NgaySinh,DiaChi=@DiaChi,Luong=@Luong,GhiChu=@GhiChu,QuyenSD=@QuyenSD Where MaNV=@MaNV";
             if (MyPublics.conMyConnection.State == ConnectionState.Closed)
@@ -283,7 +283,6 @@ namespace QL_HangHoa
                 dsNhanVien.Tables["NhanVien"].Rows[curRow][5] = dtpNgaySinh.Value;
                 dsNhanVien.Tables["NhanVien"].Rows[curRow][4] = txtDiaChi.Text;
                 dsNhanVien.Tables["NhanVien"].Rows[curRow][6] = txtLuong.Text;
-                dsNhanVien.Tables["NhanVien"].Rows[curRow][9] = strMatkhau;
                 dsNhanVien.Tables["NhanVien"].Rows[curRow][7] = txtGhiChu.Text;
                 dsNhanVien.Tables["NhanVien"].Rows[curRow][8] =cboQuyenSD.Text;
             }

@@ -45,7 +45,7 @@ namespace QL_HangHoa
                     sqlselect = "Select MaNV, QuyenSD, HoLot + ' ' + Ten AS HoTen from NhanVien Where MaNV = @MaNV and MatKhau = @MatKhau";
                     cmd = new SqlCommand(sqlselect, MyPublics.conMyConnection);
                     cmd.Parameters.AddWithValue("@MaNV", MyPublics.strMaNV);
-                    cmd.Parameters.AddWithValue("MatKhau", strpwd);
+                    cmd.Parameters.AddWithValue("@MatKhau", strpwd);
                     dr = cmd.ExecuteReader();
                     if (dr.HasRows)
                     {
